@@ -28,4 +28,34 @@ export const CalendlyAPI = {
     iconLink: "https://github.com/wappalyzer/wappalyzer/blob/master/src/drivers/webextension/images/icons/Calendly.svg"
 }
 
+export const Java = {
+    name: "Java",
+    iconLink: "https://www.vectorlogo.zone/logos/java/java-icon.svg"
+}
+
+export const Python = {
+    name: "Python",
+    iconLink: "https://www.vectorlogo.zone/logos/python/python-icon.svg"
+}
+
+export const Github = {
+    name: "Github",
+    iconLink: "https://www.vectorlogo.zone/logos/github/github-icon.svg"
+}
+
+export const HTML = {
+    name: "HTML",
+    iconLink: "https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg"
+}
+
+export const CSS = {
+    name: "CSS",
+    iconLink: "https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg"
+}
+
+export const JavaScript = {
+    name: "JavaScript",
+    iconLink: "https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg"
+}
+
 
