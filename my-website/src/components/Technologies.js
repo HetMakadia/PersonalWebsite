@@ -58,4 +58,26 @@ export const JavaScript = {
     iconLink: "https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg"
 }
 
+export const Angular = {
+    name: "AngularJS",
+    iconLink: "https://www.vectorlogo.zone/logos/angular/angular-icon.svg"
+}
+
+export const MongoDB = {
+    name: "MongoDB",
+    iconLink: "https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg"
+}
+
+export const AdobeAcrobat = {
+    name: "Adobe Acrobat",
+    iconLink: "https://www.vectorlogo.zone/logos/adobe_acrobat/adobe_acrobat-tile.svg"
+}
+
+export const JIRASoftware = {
+    name: "JIRA Software",
+    iconLink: "https://www.vectorlogo.zone/logos/atlassian_jira/atlassian_jira-icon.svg"
+}
+
+
+
 

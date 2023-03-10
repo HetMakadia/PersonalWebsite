@@ -1,4 +1,4 @@
-import {CalendlyAPI, Firebase, GoogleCloud, GoogleMapsAPI, React, TailwindCSS, Java, Python, Github, HTML, CSS, JavaScript} from "../technologies";
+import {CalendlyAPI, Firebase, GoogleCloud, GoogleMapsAPI, React, TailwindCSS, Java, Python, Github, HTML, CSS, JavaScript} from "../Technologies";
 import rooster from "./rooster.png";
 import stuxpert from "./stuxpert.png"
 import web from "./web.jpeg"
