@@ -15,10 +15,10 @@ function Projects() {
                     </div>
                     <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                         {projects.map((project) =>
-                            <a className="block grid grid-cols-12 rounded-xl border border-gray-800 p-8 shadow-xl transition bg-neutral hover:border-primary-500/10 hover:shadow-gray-500/10">
+                            <a className="block grid grid-cols-12 rounded-xl border border-gray-800 p-8 shadow-xl transition bg-neutral hover:border-white hover:shadow-gray-500/10">
                                 <img className="col-span-12 h-12" src={project.logo}/>
-                                <h2 className="col-span-12 mt-4 text-xl font-bold text-white">{project.name}</h2>
-                                <p className="col-span-12 mt-1 text-justify text-sm text-gray-300">
+                                <h2 className="col-span-12 mt-4 text-2xl font-bold text-white">{project.name}</h2>
+                                <p className="col-span-12 mt-1 text-justify text-base text-gray-300">
                                     {project.description}
                                 </p>
                                 <br/>
@@ -51,8 +51,8 @@ function Projects() {
                                 {project.name2 ?
                                     <div className="col-span-12 grid grid-cols-12">
                                         <br/>
-                                        <h2 className="col-span-12 mt-4 text-xl font-bold text-white">{project.name2}</h2>
-                                        <p className="col-span-12 mt-1 text-justify text-sm text-gray-300">
+                                        <h2 className="col-span-12 mt-4 text-2xl font-bold text-white">{project.name2}</h2>
+                                        <p className="col-span-12 mt-1 text-justify text-base text-gray-300">
                                             {project.description2}
                                         </p>
                                         <br/>
