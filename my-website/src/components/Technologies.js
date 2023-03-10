@@ -78,6 +78,11 @@ export const JIRASoftware = {
     iconLink: "https://www.vectorlogo.zone/logos/atlassian_jira/atlassian_jira-icon.svg"
 }
 
+export const Bootstrap = {
+    name: "Bootstrap",
+    iconLink: "https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-icon.svg"
+}
+
 
 
 

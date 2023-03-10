@@ -1,11 +1,8 @@
 import "./Projects.css"
 import rooster from "./rooster.png"
-import {React, Firebase, TailwindCSS} from "../Technologies"
 import {projects} from "./ProjectList";
 
 function Projects() {
-
-
     return (
         <div>
             <section className="text-white bg-base-100">
@@ -22,7 +19,6 @@ function Projects() {
                                     {project.description}
                                 </p>
                                 <br/>
-
                                 <div className="col-span-8 col-start-1">
                                     {project.techUsed.map((tech) =>
                                         <span
@@ -32,11 +28,12 @@ function Projects() {
                                             </span>
                                     )}
                                 </div>
-                                {(project.github === "Private") || (project.github === "Console")  ? (<div className="col-span-2 col-start-10">
-                                    <button className="btn btn-primary btn-outline inline-block p-3" disabled>
-                                        {project.github}
-                                    </button>
-                                </div>) : (<div className="col-span-1 col-start-11">
+                                {(project.github === "Private") || (project.github === "Console") ? (
+                                    <div className="col-span-2 col-start-10">
+                                        <button className="btn btn-primary btn-outline inline-block p-3" disabled>
+                                            {project.github}
+                                        </button>
+                                    </div>) : (<div className="col-span-1 col-start-11">
                                     <a className="inline-block rounded-full border border-indigo-600 p-3 text-indigo-600 hover:bg-indigo-600 hover:text-white focus:outline-none focus:ring active:bg-indigo-500"
                                        href={project.github} target="_blank">
                                         <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -46,8 +43,6 @@ function Projects() {
                                         </svg>
                                     </a>
                                 </div>)}
-
-
                                 {project.name2 ?
                                     <div className="col-span-12 grid grid-cols-12">
                                         <br/>
@@ -66,16 +61,19 @@ function Projects() {
                                     </span>
                                             )}
                                         </div>
-                                        {(project.github2 === "Private") || (project.github2 === "Console")  ? (<div className="col-span-2 col-start-10">
-                                            <button className="btn btn-primary btn-outline inline-block p-3" disabled>
-                                                {project.github2}
-                                            </button>
-                                        </div>) : (<div className="col-span-1 col-start-11">
+                                        {(project.github2 === "Private") || (project.github2 === "Console") ? (
+                                            <div className="col-span-2 col-start-10">
+                                                <button className="btn btn-primary btn-outline inline-block p-3"
+                                                        disabled>
+                                                    {project.github2}
+                                                </button>
+                                            </div>) : (<div className="col-span-1 col-start-11">
                                             <a className="inline-block rounded-full border border-indigo-600 p-3 text-indigo-600 hover:bg-indigo-600 hover:text-white focus:outline-none focus:ring active:bg-indigo-500"
                                                href={project.github2} target="_blank">
                                                 <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none"
                                                      viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                          stroke-width="2"
                                                           d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                                                 </svg>
                                             </a>
