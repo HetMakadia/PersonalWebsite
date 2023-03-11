@@ -22,17 +22,17 @@ function Skills() {
                 <div className="mx-auto max-w-lg text-center">
                     <h2 className="text-3xl font-bold sm:text-4xl">Skills I know.</h2>
                 </div>
-                <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5">
+                <div className="mt-8 grid grid-cols-3 gap-8 md:grid-cols-2 lg:grid-cols-5">
 
                     {skillSet.map((skill) =>
-                        <div className="block rounded-xl border border-gray-800 p-8 shadow-xl text-gray-500 transition bg-neutral hover:text-white hover:border-white hover:shadow-gray-100/10">
+                        <div className="block rounded-xl border border-gray-800 p-4 lg:p-8 shadow-xl text-gray-500 transition bg-neutral hover:text-white hover:border-white hover:shadow-gray-100/10">
                             <ol className=" relative border-gray-200 dark:border-gray-700 grid grid-cols-2">
                                 <div className="col-span-2 justify-self-center ">
-                                    <img className="h-14" src={skill.iconLink} />
+                                    <img className="h-6 lg:h-14" src={skill.iconLink}/>
                                 </div>
                                 <div className="col-span-2 justify-self-center">
                                     <br/>
-                                    <p className="text-lg">{skill.name}</p>
+                                    <p className="text-sm lg:text-lg">{skill.name}</p>
                                 </div>
                             </ol>
                         </div>

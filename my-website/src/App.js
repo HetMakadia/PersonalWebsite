@@ -10,8 +10,10 @@ import Contact from "./components/Contact/Contact";
 
 function App() {
   return (
-      <div className="bg-neutral">
+      <div className="bg-neutral h-screen">
           <LandingPage/>
+
+          <Education/>
           <Projects/>
           <WorkExperience/>
           <Skills/>
