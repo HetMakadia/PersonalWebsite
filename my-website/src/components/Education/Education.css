@@ -1,0 +1,15 @@
+.edu-heading{
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+
+.edu-sub-heading{
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+.edu-text{
+    text-align: justify;
+    line-height: 40px;
+}

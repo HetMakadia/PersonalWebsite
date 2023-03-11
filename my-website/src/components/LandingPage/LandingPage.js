@@ -3,7 +3,7 @@ import img from "./hero_main.png"
 
 function LandingPage() {
     return (
-        <div className="h-screen content-center grid grid-cols-2">
+        <div className="h-screen bg-base-100 content-center grid grid-cols-2">
             <div className="col-span-2 lg:col-span-1 justify-self-center text-info p-14 lg:p-24">
                 <h1 className="main-heading">
                     Hi 👋, <br/> I'm Het Makadia, <br/> Full-Stack Developer

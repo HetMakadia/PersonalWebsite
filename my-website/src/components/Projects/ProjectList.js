@@ -45,7 +45,7 @@ export const projects = [
     {
         logo: console,
         name: "Dungeon Master Game",
-        description: "Using Java, its class relationship concepts and other concepts like Abstraction and Interfaces, made a program that allows user to explore a dungeon maze and fight monsters that come across. Other function like healing up the user, start place and finish place was also added. I used VSC during the making of the program.",
+        description: "Using Java, its className relationship concepts and other concepts like Abstraction and Interfaces, made a program that allows user to explore a dungeon maze and fight monsters that come across. Other function like healing up the user, start place and finish place was also added. I used VSC during the making of the program.",
         techUsed: [Java],
         github: "Console"
     },
