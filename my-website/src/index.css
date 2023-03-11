@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @tailwindcss/line-clamp
+@tailwindcss/forms
 
 body {
   margin: 0;

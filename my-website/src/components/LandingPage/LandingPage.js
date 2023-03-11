@@ -6,7 +6,7 @@ function LandingPage() {
         <div className="h-screen bg-base-100 content-center grid grid-cols-2">
             <div className="col-span-2 lg:col-span-1 justify-self-center text-info p-14 lg:p-24">
                 <h1 className="main-heading">
-                    Hi 👋, <br/> I'm Het Makadia, <br/> Full-Stack Developer
+                    Hi 👋, <br/>   I'm <span className="font-bold text-orange-600">Het Makadia</span>, <br/> <span className="font-bold text-pink-600">Full-Stack</span> Developer
                 </h1>
                 <br/>
                 <p className="main-text">

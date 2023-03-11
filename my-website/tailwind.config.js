@@ -31,5 +31,5 @@ module.exports = {
     extend: {},
   },
   // Include the DaisyUI plugin in Tailwind CSS
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"), require('@tailwindcss/forms')],
 }
