@@ -1,6 +1,7 @@
 import "./Projects.css"
 import rooster from "./rooster.png"
 import {projects} from "./ProjectList";
+import {React} from "../Technologies";
 
 function Projects() {
     return (
@@ -8,7 +9,7 @@ function Projects() {
             <section className="text-white bg-base-100">
                 <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
                     <div className="mx-auto max-w-lg text-center">
-                        <h2 className="text-3xl font-bold sm:text-4xl">Things I've learned and built.</h2>
+                        <h2 className="text-3xl font-bold lg:text-5xl">Things I've learned and built.</h2>
                     </div>
                     <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                         {projects.map((project) =>
