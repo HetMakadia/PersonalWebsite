@@ -12,7 +12,6 @@ function App() {
   return (
       <div className="bg-neutral h-screen">
           <LandingPage/>
-
           <Education/>
           <Projects/>
           <WorkExperience/>

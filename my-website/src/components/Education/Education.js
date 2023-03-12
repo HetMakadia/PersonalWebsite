@@ -9,14 +9,20 @@ function Education() {
                 <div className="mx-auto max-w-lg text-center">
                     <h2 className="text-3xl font-bold sm:text-4xl">My Education.</h2>
                 </div>
-                <div className="mt-8 grid grid-cols-1 gap-8 p-14">
-                    <div className="p-14 content-center justify-self-center">
+                <div className="grid grid-cols-1 gap-8 mt-8">
+                    <div className="content-center justify-self-center">
                         <div className="items-center justify-self-center text-info ">
-                            <div className="card lg:card-side bg-base-100 hover:bg-base-content/5 shadow-xl w-100">
-                                <figure><img className="h-40" src={csulbImg} alt="Album"/></figure>
-                                <div className="card-body leading-3">
-                                    <h2 className="card-title edu-heading">B.Sc. Computer Science</h2>
-                                    <h2 className="card-title edu-sub-heading">California State University Long Beach</h2>
+                            <div className="card border border-neutral hover:border-white grid grid-cols-12 lg:card-side bg-neutral hover:bg-base-content/5 shadow-xl w-100">
+                                <div className="self-center	col-span-5 col-start-2 text-center justify-self-center	">
+                                    <h2 className="card-title edu-heading justify-center">B.Sc. Computer Science</h2>
+                                    <h2 className="card-title edu-sub-heading justify-center">California State University Long Beach</h2>
+                                    <div className="avatar">
+                                        <div className="w-60 rounded-full">
+                                            <img className="h-40 p-4 rounded-xl" src={csulbImg} alt="Album"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="card-body leading-3 col-span-5 col-start-7">
                                     <div className="items-center text-info edu-text">
                                         <h1>Relevant Coursework:</h1>
                                         <p> - Data Structures</p>
