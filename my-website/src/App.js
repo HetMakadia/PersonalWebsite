@@ -10,13 +10,18 @@ import Contact from "./components/Contact/Contact";
 
 function App() {
   return (
-      <div className="bg-neutral h-screen">
-          <LandingPage/>
-          <Education/>
-          <Projects/>
-          <WorkExperience/>
-          <Skills/>
-          <Contact/>
+      <div className=" bg-neutral  h-screen grid grid-cols-12">
+          <div className="h-full  col-span-12">
+              <header className="sticky absolute top-0 left-0 right-0 col-span-12 z-30">
+                  <Navbar/>
+              </header>
+              <LandingPage/>
+              <Education/>
+              <Projects/>
+              <WorkExperience/>
+              <Skills/>
+              <Contact/>
+          </div>
       </div>
 
   );
