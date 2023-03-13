@@ -1,31 +1,31 @@
 import "./Navbar.css"
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import resume from "../Het's Resume.pdf"
 
 function Navbar() {
     return (
-        <div className="navbar bg-neutral p-4">
+        <nav className="navbar bg-base-100 p-4">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
-                    <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a>Education</a></li>
-                        <li><a>Work Experience</a></li>
-                        <li><a>Projects</a></li>
-                        <li><a>Skills</a></li>
-                        <li><a>Contact</a></li>
+                    <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 font-bold">
+                        <li><a className="text-gray-400 hover:text-white"><Link activeClass="text-white" to="education" spy={true} smooth={true} offset={-70} duration={500}>Education</Link></a></li>
+                        <li><a className="text-gray-400 hover:text-white"><Link activeClass="text-white" to="projects" spy={true} smooth={true} offset={-70} duration={500}>Projects</Link></a></li>
+                        <li><a className="text-gray-400 hover:text-white"><Link activeClass="text-white" to="workexperience" spy={true} smooth={true} offset={-70} duration={500}>Work Experience</Link></a></li>
+                        <li><a className="text-gray-400 hover:text-white"><Link activeClass="text-white" to="skills" spy={true} smooth={true} offset={-70} duration={500}>Skills</Link></a></li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">Het Makadia</a>
+                <a className="btn btn-ghost normal-case text-2xl font-bold"><Link activeClass="text-white" to="main" spy={true} smooth={true} offset={-70} duration={500}>Het Makadia</Link></a>
+
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
-                    <li><a>Education</a></li>
-                    <li><a>Work Experience</a></li>
-                    <li><a>Projects</a></li>
-                    <li><a>Skills</a></li>
-                    <li><a>Contact</a></li>
+                <ul className="menu menu-horizontal px-1 font-bold">
+                    <li><a className="text-gray-400 hover:text-white"><Link activeClass="text-white" to="education" spy={true} smooth={true} offset={-70} duration={500}>Education</Link></a></li>
+                    <li><a className="text-gray-400 hover:text-white"><Link activeClass="text-white" to="projects" spy={true} smooth={true} offset={-70} duration={500}>Projects</Link></a></li>
+                    <li><a className="text-gray-400 hover:text-white"><Link activeClass="text-white" to="workexperience" spy={true} smooth={true} offset={-70} duration={500}>Work Experience</Link></a></li>
+                    <li><a className="text-gray-400 hover:text-white"><Link activeClass="text-white" to="skills" spy={true} smooth={true} offset={-70} duration={500}>Skills</Link></a></li>
                 </ul>
             </div>
             <div className="navbar-end">
@@ -40,7 +40,7 @@ function Navbar() {
                     </span>
                 </a>
             </div>
-        </div>
+        </nav>
     )
 }
 

@@ -4,13 +4,12 @@ import {React} from "../Technologies";
 
 function Education() {
     return (
-        <div>
-            <section className="text-white bg-base-100 ">
-                <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
-                    <div className="mx-auto max-w-lg text-center">
+        <section id="education" className="text-white bg-base-100 ">
+            <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+                <div className="mx-auto max-w-lg text-center">
                     <h2 className="text-3xl font-bold lg:text-5xl">My Education.</h2>
                 </div>
-                    <div className="grid grid-cols-1 gap-8 mt-8">
+                <div className="grid grid-cols-1 gap-8 mt-8">
                     <div className="content-center justify-self-center">
                         <div className="items-center justify-self-center text-info ">
                             <div className="card border border-neutral hover:border-white grid grid-cols-12 lg:card-side bg-neutral hover:bg-base-content/5 shadow-xl w-100">
@@ -41,9 +40,8 @@ function Education() {
                         </div>
                     </div>
                 </div>
-                </div>
-            </section>
-        </div>
+            </div>
+        </section>
 
     )
 }

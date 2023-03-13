@@ -1,9 +1,10 @@
 import "./LandingPage.css"
 import img from "./hero_main.png"
+import {Link} from "react-scroll";
 
 function LandingPage() {
     return (
-        <div className=" items-center bg-base-100 content-center grid grid-cols-2">
+        <section id="main" className=" items-center bg-base-100 content-center grid grid-cols-2">
             <div className="col-span-2 lg:col-span-1 justify-self-center text-info p-14 lg:p-24">
                 <h1 className="main-heading">
                     Hi 👋, <br/>   I'm <span className="font-bold text-gray-400">Het Makadia</span>, <br/> <span className="font-bold text-gray-600">Full-Stack</span> Developer
@@ -19,16 +20,10 @@ function LandingPage() {
                     a complex web application, I'm always up for a challenge.
                 </p>
                 <br/>
-                <a className="group relative inline-block text-sm font-medium focus:outline-none focus:ring m-4 text-base-100" href="">
+                <a className="group relative rounded-xl inline-block text-sm font-medium focus:outline-none focus:ring text-base-100" href="">
                     <span className="absolute inset-0 border border-primary group-active:border-primary"/>
                     <span className="block border border-neutral bg-primary px-12 py-3 transition-transform active:border-primary active:bg-primary group-hover:-translate-x-1 group-hover:-translate-y-1">
-                        Hire Me
-                    </span>
-                </a>
-                <a className="group relative inline-block text-sm font-medium text-primary focus:outline-none focus:ring active:text-primary m-4" href="">
-                    <span className="absolute inset-0 border border-current"/>
-                    <span className="block border border-current bg-neutral px-12 py-3 transition-transform group-hover:-translate-x-1 group-hover:-translate-y-1">
-                        My Projects
+                        <a><Link activeClass="text-white" to="contact" spy={true} smooth={true} offset={-70} duration={500}>Hire Me</Link></a>
                     </span>
                 </a>
             </div>
@@ -36,7 +31,7 @@ function LandingPage() {
             <div className="col-span-2 lg:col-span-1 justify-self-center">
                 <img src={img} className="max-w-sm rounded-lg shadow-2xl" />
             </div>
-        </div>
+        </section>
     )
 }
 
