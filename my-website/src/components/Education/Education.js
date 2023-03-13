@@ -13,17 +13,17 @@ function Education() {
                     <div className="content-center justify-self-center">
                         <div className="items-center justify-self-center text-info ">
                             <div className="card border border-neutral hover:border-white grid grid-cols-12 lg:card-side bg-neutral hover:bg-base-content/5 shadow-xl w-100">
-                                <div className="self-center	col-span-5 col-start-2 text-center justify-self-center	">
-                                    <h2 className="card-title edu-heading justify-center">B.Sc. Computer Science</h2>
-                                    <h2 className="card-title edu-sub-heading justify-center">California State University Long Beach</h2>
-                                    <div className="avatar">
+                                <div className="self-center	col-span-12 p-4 lg:p-0 lg:col-span-5 lg:col-start-2 text-center justify-self-center	">
+                                    <h2 className="card-title text-xl lg:text-3xl font-bold justify-center">B.Sc. Computer Science</h2>
+                                    <h2 className="card-title text-xl lg:text-2xl font-bold justify-center">California State University Long Beach</h2>
+                                    <div className="avatar w-42 lg:w-60">
                                         <div className="w-60 rounded-full">
                                             <img className="h-40 p-4 rounded-xl" src={csulbImg} alt="Album"/>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="card-body leading-3 col-span-5 col-start-7">
-                                    <div className="items-center text-info edu-text">
+                                <div className=" card-body leading-3 col-span-12 p-4 lg:p-0 lg:col-span-5 lg:col-start-7">
+                                    <div className=" text-center items-center text-info edu-text">
                                         <h1>Relevant Coursework:</h1>
                                         <p> - Data Structures</p>
                                         <p> - Object Oriented Application Development</p>
