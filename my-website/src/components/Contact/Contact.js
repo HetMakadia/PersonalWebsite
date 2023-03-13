@@ -10,7 +10,7 @@ function Contact() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
-    const [phone, setPhone] = useState(0);
+    const [phone, setPhone] = useState();
 
     const data = {
         name: name,
@@ -105,7 +105,7 @@ function Contact() {
 
                                 </div>
                                 {isDisabled ?
-                                    <div className="text-success">Your feedback is saved. If you missed anything, please reload the page to send response again.</div>
+                                    <div className="text-success">Thanks for reaching out to me.</div>
                                 :
                                 null
                                 }
