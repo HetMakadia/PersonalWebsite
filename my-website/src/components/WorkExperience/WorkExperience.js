@@ -1,4 +1,3 @@
-import "./WorkExperience.css"
 import {WorkExperienceList} from "./WorkExperienceList"
 import {projects} from "../Projects/ProjectList";
 import {React} from "../Technologies";

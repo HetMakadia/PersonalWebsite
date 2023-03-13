@@ -1,5 +1,3 @@
-import "./Projects.css"
-import rooster from "./rooster.png"
 import {projects} from "./ProjectList";
 import {React} from "../Technologies";
 

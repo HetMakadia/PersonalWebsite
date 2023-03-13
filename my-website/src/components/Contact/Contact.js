@@ -1,4 +1,3 @@
-import "./Contact.css"
 import {React} from "../Technologies";
 
 function Contact() {

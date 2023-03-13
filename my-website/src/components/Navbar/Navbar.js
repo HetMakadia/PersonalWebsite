@@ -1,5 +1,4 @@
-import "./Navbar.css"
-import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link} from 'react-scroll'
 import resume from "../Het's Resume.pdf"
 
 function Navbar() {
