@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cd3bd09f.css",
+    "main.js": "/static/js/main.9895b67e.js",
+    "static/js/787.bbe01249.chunk.js": "/static/js/787.bbe01249.chunk.js",
+    "static/media/hero_main.PNG": "/static/media/hero_main.42dca2e16cf6996c28a8.PNG",
+    "static/media/Het's Resume.pdf": "/static/media/Het's Resume.ab4f9c49bc824060c41e.pdf",
+    "static/media/rooster.png": "/static/media/rooster.d5b58f7665258e0bb126.png",
+    "static/media/stuxpert.png": "/static/media/stuxpert.83b490f64c9b414a7604.png",
+    "static/media/web.jpeg": "/static/media/web.320d8aa5900ba49be4f1.jpeg",
+    "static/media/csulb.jpg": "/static/media/csulb.98c0367595b20c407f67.jpg",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/index.html",
+    "main.cd3bd09f.css.map": "/static/css/main.cd3bd09f.css.map",
+    "main.9895b67e.js.map": "/static/js/main.9895b67e.js.map",
+    "787.bbe01249.chunk.js.map": "/static/js/787.bbe01249.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cd3bd09f.css",
+    "static/js/main.9895b67e.js"
+  ]
+}
