@@ -1,6 +1,37 @@
-import {React} from "../Technologies";
+import { collection, doc, setDoc, getDocs, addDoc } from "firebase/firestore";
+import {db} from "../../firebase-config"
+import React, {useEffect, useState} from "react";
+
 
 function Contact() {
+    const dbRef = collection(db, "Notifications")
+    const [isDisabled, setIsDisabled] = useState(false);
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+    const [phone, setPhone] = useState(0);
+
+    const data = {
+        name: name,
+        email: email,
+        phone: phone,
+        message: message
+    };
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        addDoc(dbRef, data)
+            .then(docRef => {
+                setIsDisabled(!isDisabled)
+                console.log("Document has been added successfully");
+            })
+            .catch(error => {
+                console.log(error);
+            })
+
+    };
+
+
     return (
         <section id="contact" className="text-white bg-base-100">
             <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
@@ -51,30 +82,30 @@ function Contact() {
                             </div>
                         </div>
                         <div className="rounded-lg bg-neutral p-8 shadow-lg lg:col-span-3 lg:p-12">
-                            <form action="" className="space-y-4">
+                            <form action="" className="space-y-4" onSubmit={handleSubmit}>
                                 <div>
                                     <label className="sr-only" htmlFor="name">Name</label>
-                                    <input className="w-full rounded-lg bg-base-100 border-gray-800 hover:bg-black hover:border-white p-3 text-sm" placeholder="Name" type="text" id="name"/>
+                                    <input className="w-full rounded-lg bg-base-100 border-gray-800 hover:bg-black hover:border-white p-3 text-sm" placeholder="Name" type="text" value={name} onChange={e => setName(e.target.value)} disabled={isDisabled}/>
                                 </div>
 
                                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                                     <div>
                                         <label className="sr-only" htmlFor="email">Email</label>
-                                        <input className="w-full bg-base-100 rounded-lg border-gray-800 hover:bg-black hover:border-white p-3 text-sm" placeholder="Email address" type="email" id="email"/>
+                                        <input className="w-full bg-base-100 rounded-lg border-gray-800 hover:bg-black hover:border-white p-3 text-sm" placeholder="Email address" type="email" value={email} onChange={e => setEmail(e.target.value)} disabled={isDisabled}/>
                                     </div>
 
                                     <div>
                                         <label className="sr-only" htmlFor="phone">Phone</label>
-                                        <input className="w-full bg-base-100 rounded-lg border-gray-800 hover:bg-black hover:border-white p-3 text-sm" placeholder="Phone Number" type="tel" id="phone"/>
+                                        <input className="w-full bg-base-100 rounded-lg border-gray-800 hover:bg-black hover:border-white p-3 text-sm" placeholder="Phone Number" type="tel" value={phone} onChange={e => setPhone(e.target.value)} disabled={isDisabled}/>
                                     </div>
                                 </div>
 
                                 <div>
                                     <label className="sr-only" htmlFor="message">Message</label>
-                                    <textarea className="w-full bg-base-100 rounded-lg border-gray-800 hover:bg-black hover:border-white p-3 text-sm" placeholder="Message" rows="8" id="message"></textarea>
+                                    <textarea disabled={isDisabled} className="w-full bg-base-100 rounded-lg border-gray-800 hover:bg-black hover:border-white p-3 text-sm" placeholder="Message" rows="8" value={message} onChange={e => setMessage(e.target.value)} ></textarea>
                                 </div>
                                 <div className="mt-4">
-                                    <button type="submit" className="inline-block border border-gray-800  w-full bg-base-100 rounded-lg hover:bg-black hover:border-white px-5 py-3 font-medium text-white sm:w-auto">
+                                    <button type="submit" className="inline-block border border-gray-800 w-full bg-base-100 rounded-lg hover:bg-black hover:border-white px-5 py-3 font-medium text-white sm:w-auto">
                                         Send Message
                                     </button>
                                 </div>
