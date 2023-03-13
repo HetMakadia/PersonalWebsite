@@ -1,5 +1,6 @@
 import { collection, doc, setDoc, getDocs, addDoc } from "firebase/firestore";
 import {db} from "../../firebase-config"
+import { Textarea } from "@material-tailwind/react";
 import React, {useEffect, useState} from "react";
 
 
@@ -28,9 +29,7 @@ function Contact() {
             .catch(error => {
                 console.log(error);
             })
-
     };
-
 
     return (
         <section id="contact" className="text-white bg-base-100">
@@ -93,31 +92,34 @@ function Contact() {
                                         <label className="sr-only" htmlFor="email">Email</label>
                                         <input className="w-full bg-base-100 rounded-lg border-gray-800 hover:bg-black hover:border-white p-3 text-sm" placeholder="Email address" type="email" value={email} onChange={e => setEmail(e.target.value)} disabled={isDisabled}/>
                                     </div>
-
                                     <div>
                                         <label className="sr-only" htmlFor="phone">Phone</label>
                                         <input className="w-full bg-base-100 rounded-lg border-gray-800 hover:bg-black hover:border-white p-3 text-sm" placeholder="Phone Number" type="tel" value={phone} onChange={e => setPhone(e.target.value)} disabled={isDisabled}/>
                                     </div>
                                 </div>
-
                                 <div>
                                     <label className="sr-only" htmlFor="message">Message</label>
-                                    <textarea disabled={isDisabled} className="w-full bg-base-100 rounded-lg border-gray-800 hover:bg-black hover:border-white p-3 text-sm" placeholder="Message" rows="8" value={message} onChange={e => setMessage(e.target.value)} ></textarea>
+
+                                    {isDisabled?<textarea disabled className="w-full bg-base-100 rounded-lg border-gray-800 hover:bg-black hover:border-white p-3 text-sm" placeholder="Message" rows="8" value={message} onChange={e => setMessage(e.target.value)} ></textarea> : <textarea  className="w-full bg-base-100 rounded-lg border-gray-800 hover:bg-black hover:border-white p-3 text-sm" placeholder="Message" rows="8" value={message} onChange={e => setMessage(e.target.value)} ></textarea> }
+
+
                                 </div>
+                                {isDisabled ?
+                                    <div className="text-success">Your feedback is saved. If you missed anything, please reload the page to send response again.</div>
+                                :
+                                null
+                                }
                                 <div className="mt-4">
-                                    <button type="submit" className="inline-block border border-gray-800 w-full bg-base-100 rounded-lg hover:bg-black hover:border-white px-5 py-3 font-medium text-white sm:w-auto">
+                                    <button disabled={isDisabled} type="submit" className="inline-block border border-gray-800 w-full bg-base-100 rounded-lg hover:bg-black hover:border-white px-5 py-3 font-medium text-white sm:w-auto">
                                         Send Message
                                     </button>
                                 </div>
                             </form>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </section>
     )
 }
-
 export default Contact;

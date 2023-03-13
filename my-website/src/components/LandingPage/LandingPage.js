@@ -1,5 +1,5 @@
 import "./LandingPage.css"
-import img from "./hero_main.png"
+import img from "./hero_main.JPEG"
 import {Link} from "react-scroll";
 
 function LandingPage() {
@@ -29,7 +29,7 @@ function LandingPage() {
             </div>
 
             <div className="col-span-2 lg:col-span-1 justify-self-center">
-                <img src={img} className="max-w-sm rounded-lg shadow-2xl" />
+                <img src={img} className="max-w-lg" />
             </div>
         </section>
     )
