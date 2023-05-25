@@ -1,5 +1,5 @@
 import "./Education.css"
-import csulbImg from "./csulb.jpg"
+import csulbImg from "./education.jpg"
 import {React} from "../Technologies";
 
 function Education() {
@@ -16,9 +16,10 @@ function Education() {
                                 <div className="self-center	col-span-12 p-4 lg:p-0 lg:col-span-5 lg:col-start-2 text-center justify-self-center	">
                                     <h2 className="card-title text-xl lg:text-3xl font-bold justify-center">B.Sc. Computer Science</h2>
                                     <h2 className="card-title text-xl lg:text-2xl font-bold justify-center">California State University Long Beach</h2>
+                                    <br/>
                                     <div className="avatar w-42 lg:w-60">
                                         <div className="w-60 rounded-full">
-                                            <img className="h-40 p-4 rounded-xl" src={csulbImg} alt="Album"/>
+                                            <img className="h-40" src={csulbImg} alt="Album"/>
                                         </div>
                                     </div>
                                 </div>

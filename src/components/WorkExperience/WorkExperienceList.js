@@ -6,7 +6,7 @@ export const WorkExperienceList = [
         link: "https://www.employers.com/",
         position: "Application Development Intern",
         startDate: "June, 2022",
-        endDate: "Current",
+        endDate: "May, 2023",
         responsibilities: "Develop and update software using Frontend and Backend technologies in an Agile Software\n" +
             "Development environment, utilizing JIRA Software/Boards to track project progress. Utilize analytical\n" +
             "and problem-solving skills to build software using AngularJS, JAVA, HTML, SCSS, MongoDB, JavaScript,\n" +

@@ -8,7 +8,7 @@ export const projects = [
     {
         logo: rooster,
         name: "Rooster - Roommate Finder",
-        description: "Currently working on Rooster, a roommate-finding application that aims to simplify the process of finding a new roommate. Rooster features an array of user-friendly tools to streamline the process, including a calling feature and mini games to engage users. As a team performing Senior Project, we are committed to creating a seamless user experience that meets the needs of a diverse user base.",
+        description: "Worked on Rooster, a roommate-finding application that aims to simplify the process of finding a new roommate. Rooster features an array of user-friendly tools to streamline the process, including a calling feature and mini games to engage users. As a team performing Senior Project, we are committed to creating a seamless user experience that meets the needs of a diverse user base.",
         techUsed: [React, Firebase, TailwindCSS, Github],
         github: "Private"
     },
