@@ -1,5 +1,5 @@
 import { Link} from 'react-scroll'
-import resume from "../Het's Resume.pdf"
+import resume from "../Resume.pdf"
 
 function Navbar() {
     return (

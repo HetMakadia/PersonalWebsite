@@ -7,12 +7,12 @@ export const WorkExperienceList = [
         position: "Application Development Intern",
         startDate: "June, 2022",
         endDate: "May, 2023",
-        responsibilities: "Develop and update software using Frontend and Backend technologies in an Agile Software\n" +
-            "Development environment, utilizing JIRA Software/Boards to track project progress. Utilize analytical\n" +
-            "and problem-solving skills to build software using AngularJS, JAVA, HTML, SCSS, MongoDB, JavaScript,\n" +
-            "and Microsoft Office Suite. Provide IT support in various areas, including cybersecurity, programming,\n" +
-            "project management, business analysis, analytics, and data center management. Maintain IT resources,\n" +
-            "troubleshoot issues, and provide technical support while working collaboratively in a team.",
+        responsibilities: "Contributed in the transformation of Excel-based app and records into a modern, " +
+            "user-friendly web application, Access Report, by utilizing AngularJS, Typescript, HTML, CSS, Java, and MongoDB. " +
+            "Successfully followed Agile Methodology, ensuring flexibility and iteration throughout the development process. " +
+            "Efficiently tracked project progress, managed tasks, and collaborated seamlessly with team members using JIRA Software/Boards. " +
+            "Achieved timely project delivery through streamlined project management and efficient development cycles." ,
+
         skillsUsed: [Angular, Java, HTML, CSS, MongoDB, JavaScript, JIRASoftware],
     },
     {
@@ -21,12 +21,10 @@ export const WorkExperienceList = [
         position: "Learning Technologies and Design Student Assistant",
         startDate: "Aug, 2021",
         endDate: "May, 2022",
-        responsibilities: "Collaborate with Instructional Designers and Subject Matter Experts to create accessible course\n" +
-            "materials for online and hybrid courses, utilizing a variety of formats such as print, graphics, video,\n" +
-            "animation, and multimedia. Ensure compliance with accessibility standards, and provide support to\n" +
-            "faculty on the effective use of instructional technology tools, including Microsoft Office, Adobe Suite,\n" +
-            "BlackBoard Ally, and BeachBoard. Develop and deliver training sessions on accessibility and provide\n" +
-            "virtual, phone, and walk-in support for faculty.",
+        responsibilities: "Ensured accessibility of various document formats (PDF, Word, PowerPoint, Excel, etc.) upon request. " +
+            "Utilized Adobe and Microsoft Apps, employing OCR scanning and Accessibility Checker functions to make documents accessible for all users.\n" +
+            "Co-ordinated closely with Instructional Designers and Subject Matter Experts to develop accessible course materials for online and hybrid courses.\n" +
+            "Worked with diverse formats (print, graphics, video, animation, multimedia) to optimize accessibility and inclusivity.",
         skillsUsed: [AdobeAcrobat],
     },
 ]

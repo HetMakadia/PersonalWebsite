@@ -8,7 +8,10 @@ export const projects = [
     {
         logo: rooster,
         name: "Rooster - Roommate Finder",
-        description: "Worked on Rooster, a roommate-finding application that aims to simplify the process of finding a new roommate. Rooster features an array of user-friendly tools to streamline the process, including a calling feature and mini games to engage users. As a team performing Senior Project, we are committed to creating a seamless user experience that meets the needs of a diverse user base.",
+        description: "Contributed to the development of a roommate finder app as a key member of a collaborative team for a Senior Project.\n" +
+            "Analyzed the need for the app and created essential software development documents.\n" +
+            "Actively participated in coding and testing phases, ensuring the app met the specific requirements of users seeking compatible roommates.\n" +
+            "Accomplished a range of features, including user matching, user search, messaging capabilities, mini games, post creation, and account management functionalities.",
         techUsed: [React, Firebase, TailwindCSS, Github],
         github: "Private"
     },
@@ -16,7 +19,10 @@ export const projects = [
     {
         logo: stuxpert,
         name: "stuXpert",
-        description: "Our 4-person team created a full-stack web app with a discussion board where users can post questions and receive comments. The app includes a like/dislike feature for expressing agreement or disagreement. We implemented authentication and session login functionality for user security. Our project demonstrates our skills in developing scalable and user-friendly web applications. The advanced features enhance the overall user experience.",
+        description: "Participated with a team of four in the BeachHacks Hackathon to create a full-stack web application.\n" +
+            "Developed a discussion board platform that facilitated user engagement and collaboration by allowing users to post questions and receive comments.\n" +
+            "Prioritized user security by implementing authentication and session login functionality.\n" +
+            "Demonstrated skills in developing scalable and user-friendly solutions, incorporating advanced features that enhanced the overall user experience.",
         techUsed: [React, Firebase, TailwindCSS, GoogleCloud, Github],
         github: "https://github.com/Deep392/BeachHacks-7"
     },
@@ -34,10 +40,10 @@ export const projects = [
     {
         logo: web,
         name: "Real Estate Website",
-        description: "In a team, developed a website for a realtor to support the growth of their business. This involved building the website's frontend and backend structures, as well as implementing key features, such as\n" +
-            "the Google Maps API, Calendly API and Admin Panel. My development work focused on creating a" +
-            "website that was intuitive and user-friendly, while also meeting the specific needs of the real estate" +
-            "industry",
+        description: "Played a vital role as a member of a collaborative team of four in the development of a website for a realtor, contributing to both frontend and backend development.\n" +
+            "Successfully implemented key features such as the Google Maps API, Calendly API, and Admin Panel to support the growth of the realtor's business.\n" +
+            "Conducted a thorough analysis to gather insights and meet client needs and requirements.\n" +
+            "Utilized software development life cycle documents and graphs to closely observe and analyze results, driving continuous improvement and optimization.",
         techUsed: [React, GoogleMapsAPI, CalendlyAPI, Github],
         github: "Private"
     },
