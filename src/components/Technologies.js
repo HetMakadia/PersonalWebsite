@@ -1,5 +1,5 @@
 export const React = {
-    name: "React",
+    name: "ReactJS",
     iconLink: "https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg"
 }
 
@@ -83,6 +83,40 @@ export const Bootstrap = {
     iconLink: "https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-icon.svg"
 }
 
+export const PostgreSQL = {
+    name: "PostgreSQL",
+    iconLink: "https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg"
+}
+
+export const NodeJS = {
+    name: "NodeJS",
+    iconLink: "https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg"
+}
+
+export const MSWord = {
+    name: "MS Word",
+    iconLink: "https://upload.wikimedia.org/wikipedia/commons/f/fd/Microsoft_Office_Word_%282019%E2%80%93present%29.svg"
+}
+
+export const MSExcel = {
+    name: "MS Excel",
+    iconLink: "https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg"
+}
+
+export const MSPowerpoint = {
+    name: "MS Powerpoint",
+    iconLink: "https://upload.wikimedia.org/wikipedia/commons/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg"
+}
+
+export const Sharepoint = {
+    name: "Sharepoint",
+    iconLink: "https://upload.wikimedia.org/wikipedia/commons/e/e1/Microsoft_Office_SharePoint_%282019%E2%80%93present%29.svg"
+}
+
+export const Bitbucket = {
+    name: "Bitbucket",
+    iconLink: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Bitbucket-blue-logomark-only.svg"
+}
 
 
 
