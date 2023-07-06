@@ -68,18 +68,19 @@ export const projects = [
         name: "Automobile Database",
         description: "Using SQL queries and concepts, build an automobile database which includes the storage of manufacturers, automobiles, models, customers, and contracts. While making the database, proper procedure was followed including the UML diagrams, Relation Schema, Class descriptions, Association description, and others. I used IntelliJ Idea during the making of the program.",
         techUsed: [PostgreSQL],
-        github: "Console"
+        github: "https://github.com/HetMakadia/AutomobileDatabase"
     },
     {
         logo: console,
-        name: "Bookstore System",
-        description: "Learned and applied concepts of Data Structures to build an bookstore system throughout the semester. Understood and applied lists, maps, sorts, and queues to build the different functionality to modify the lists and cart in bookstore.",
-        techUsed: [Python],
-        github: "Console",
+        name: "Dungeon Master Game",
+        description: "Using Java, its className relationship concepts and other concepts like Abstraction and Interfaces, made a program that allows user to explore a dungeon maze and fight monsters that come across. Other function like healing up the user, start place and finish place was also added. I used VSC during the making of the program.",
+        techUsed: [Java],
+        github: "https://github.com/HetMakadia/Dungeon-Master-Game",
         logo2: console,
-        name2: "Dungeon Master Game",
-        description2: "Using Java, its className relationship concepts and other concepts like Abstraction and Interfaces, made a program that allows user to explore a dungeon maze and fight monsters that come across. Other function like healing up the user, start place and finish place was also added. I used VSC during the making of the program.",
-        techUsed2: [Java],
-        github2: "Console"
+        name2: "Bookstore System",
+        description2: "Learned and applied concepts of Data Structures to build an bookstore system throughout the semester. Understood and applied lists, maps, sorts, and queues to build the different functionality to modify the lists and cart in bookstore.",
+        techUsed2: [Python],
+        github2: "Console",
+
     },
 ];
