@@ -1,4 +1,15 @@
-import {AdobeAcrobat, Angular, CSS, HTML, Java, JavaScript, JIRASoftware, MongoDB} from "../Technologies";
+import {
+    AdobeAcrobat,
+    Angular,
+    Bitbucket,
+    CSS,
+    HTML,
+    Java,
+    JavaScript,
+    JIRASoftware,
+    MongoDB, MSExcel,
+    MSWord, MSPowerpoint, Sharepoint
+} from "../Technologies";
 
 export const WorkExperienceList = [
     {
@@ -13,7 +24,7 @@ export const WorkExperienceList = [
             "Efficiently tracked project progress, managed tasks, and collaborated seamlessly with team members using JIRA Software/Boards. " +
             "Achieved timely project delivery through streamlined project management and efficient development cycles." ,
 
-        skillsUsed: [Angular, Java, HTML, CSS, MongoDB, JavaScript, JIRASoftware],
+        skillsUsed: [Angular, Java, HTML, CSS, MongoDB, JavaScript, Bitbucket,JIRASoftware],
     },
     {
         companyName: "Academic Technology Services, CSULB",
@@ -25,6 +36,6 @@ export const WorkExperienceList = [
             "Utilized Adobe and Microsoft Apps, employing OCR scanning and Accessibility Checker functions to make documents accessible for all users.\n" +
             "Co-ordinated closely with Instructional Designers and Subject Matter Experts to develop accessible course materials for online and hybrid courses.\n" +
             "Worked with diverse formats (print, graphics, video, animation, multimedia) to optimize accessibility and inclusivity.",
-        skillsUsed: [AdobeAcrobat],
+        skillsUsed: [AdobeAcrobat, MSWord, MSExcel, MSPowerpoint, Sharepoint],
     },
 ]

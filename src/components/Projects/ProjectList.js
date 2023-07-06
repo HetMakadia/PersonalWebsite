@@ -1,8 +1,23 @@
-import {CalendlyAPI, Firebase, GoogleCloud, GoogleMapsAPI, React, TailwindCSS, Java, Python, Github, HTML, CSS, JavaScript} from "../Technologies";
+import {
+    CalendlyAPI,
+    Firebase,
+    GoogleCloud,
+    GoogleMapsAPI,
+    React,
+    TailwindCSS,
+    Java,
+    Python,
+    Github,
+    HTML,
+    CSS,
+    JavaScript,
+    PostgreSQL
+} from "../Technologies";
 import rooster from "./rooster.png";
 import stuxpert from "./stuxpert.png"
 import web from "./web.jpeg"
 import console from "./console.png"
+import databaseimg from "./database.png"
 
 export const projects = [
     {
@@ -49,10 +64,10 @@ export const projects = [
     },
 
     {
-        logo: console,
-        name: "Dungeon Master Game",
-        description: "Using Java, its className relationship concepts and other concepts like Abstraction and Interfaces, made a program that allows user to explore a dungeon maze and fight monsters that come across. Other function like healing up the user, start place and finish place was also added. I used VSC during the making of the program.",
-        techUsed: [Java],
+        logo: databaseimg,
+        name: "Automobile Database",
+        description: "Using SQL queries and concepts, build an automobile database which includes the storage of manufacturers, automobiles, models, customers, and contracts. While making the database, proper procedure was followed including the UML diagrams, Relation Schema, Class descriptions, Association description, and others. I used IntelliJ Idea during the making of the program.",
+        techUsed: [PostgreSQL],
         github: "Console"
     },
     {
@@ -60,6 +75,11 @@ export const projects = [
         name: "Bookstore System",
         description: "Learned and applied concepts of Data Structures to build an bookstore system throughout the semester. Understood and applied lists, maps, sorts, and queues to build the different functionality to modify the lists and cart in bookstore.",
         techUsed: [Python],
-        github: "Console"
+        github: "Console",
+        logo2: console,
+        name2: "Dungeon Master Game",
+        description2: "Using Java, its className relationship concepts and other concepts like Abstraction and Interfaces, made a program that allows user to explore a dungeon maze and fight monsters that come across. Other function like healing up the user, start place and finish place was also added. I used VSC during the making of the program.",
+        techUsed2: [Java],
+        github2: "Console"
     },
 ];
