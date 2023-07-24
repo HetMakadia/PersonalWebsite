@@ -29,7 +29,7 @@ export const WorkExperienceList = [
     {
         companyName: "Academic Technology Services, CSULB",
         link: "https://www.csulb.edu/academic-technology-services",
-        position: "Learning Technologies and Design Student Assistant",
+        position: "Accessible Content Developer",
         startDate: "Aug, 2021",
         endDate: "May, 2022",
         responsibilities: "Ensured accessibility of various document formats (PDF, Word, PowerPoint, Excel, etc.) upon request. " +
