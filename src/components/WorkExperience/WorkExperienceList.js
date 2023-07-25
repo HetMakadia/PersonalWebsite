@@ -49,6 +49,6 @@ export const WorkExperienceList = [
             "Implemented an agile development approach for restaurant's project using AngularJS and Python, resulting in a 15% increase in project delivery speed.\n" +
             "Innovated by integrating Tailwind and Bootstrap CSS in both projects, reducing CSS codebase by 25% and improving responsiveness across devices.\n" +
             "Integrated Firebase for real-time data synchronization, leading to decrease in query execution time and improved collaboration among team members.",
-        skillsUsed: [React, Angular, Github, MongoDB, Firebase, JIRASoftware],
+        skillsUsed: [React, Angular, Python, Java, Github, MongoDB, Firebase, JIRASoftware],
     }
 ]
