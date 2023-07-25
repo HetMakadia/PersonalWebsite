@@ -8,7 +8,7 @@ import {
     JavaScript,
     JIRASoftware,
     MongoDB, MSExcel,
-    MSWord, MSPowerpoint, Sharepoint
+    MSWord, MSPowerpoint, Sharepoint, React, Python, Firebase, Github
 } from "../Technologies";
 
 export const WorkExperienceList = [
@@ -38,4 +38,17 @@ export const WorkExperienceList = [
             "Worked with diverse formats (print, graphics, video, animation, multimedia) to optimize accessibility and inclusivity.",
         skillsUsed: [AdobeAcrobat, MSWord, MSExcel, MSPowerpoint, Sharepoint],
     },
+    ,
+    {
+        companyName: "Technozions",
+        link: "https://technozions.com",
+        position: "Full-Stack Development Intern",
+        startDate: "Jan, 2021",
+        endDate: "July, 2022",
+        responsibilities: "Migrated and enhanced project front-end from class based React.js to React hooks, reducing load times by 20% and boosting user engagement.\n" +
+            "Implemented an agile development approach for restaurant's project using AngularJS and Python, resulting in a 15% increase in project delivery speed.\n" +
+            "Innovated by integrating Tailwind and Bootstrap CSS in both projects, reducing CSS codebase by 25% and improving responsiveness across devices.\n" +
+            "Integrated Firebase for real-time data synchronization, leading to decrease in query execution time and improved collaboration among team members.",
+        skillsUsed: [React, Angular, Github, MongoDB, Firebase, JIRASoftware],
+    }
 ]
