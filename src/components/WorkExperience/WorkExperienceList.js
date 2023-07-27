@@ -44,7 +44,7 @@ export const WorkExperienceList = [
         link: "https://technozions.com",
         position: "Full-Stack Development Intern",
         startDate: "Jan, 2021",
-        endDate: "July, 2022",
+        endDate: "July, 2021",
         responsibilities: "Migrated and enhanced project front-end from class based React.js to React hooks, reducing load times by 20% and boosting user engagement.\n" +
             "Implemented an agile development approach for restaurant's project using AngularJS and Python, resulting in a 15% increase in project delivery speed.\n" +
             "Innovated by integrating Tailwind and Bootstrap CSS in both projects, reducing CSS codebase by 25% and improving responsiveness across devices.\n" +
