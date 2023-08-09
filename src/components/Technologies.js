@@ -118,5 +118,17 @@ export const Bitbucket = {
     iconLink: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Bitbucket-blue-logomark-only.svg"
 }
 
+export const JSON = {
+    name: "JSON",
+    iconLink: "https://upload.wikimedia.org/wikipedia/commons/c/c9/JSON_vector_logo.svg"
+}
+
+export const AWSLambda = {
+    name: "AWS Lambda",
+    iconLink: "https://upload.wikimedia.org/wikipedia/commons/e/e9/Amazon_Lambda_architecture_logo.png"
+}
+
+
+
 
 

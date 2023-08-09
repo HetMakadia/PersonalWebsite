@@ -13,11 +13,13 @@ import {
     PostgreSQL,
     TailwindCSS,
     Bootstrap,
-    Bitbucket
+    Bitbucket,
+    JSON,
+    AWSLambda
 } from "../Technologies";
 
 function Skills() {
-    const skillSet = [React, Angular, NodeJS, JavaScript, Java, Python, Firebase, MongoDB, PostgreSQL, HTML, CSS, TailwindCSS, Bootstrap, Github, Bitbucket ,JIRASoftware]
+    const skillSet = [React, Angular, NodeJS, JavaScript, Java, Python, Firebase, MongoDB, PostgreSQL, AWSLambda, JSON, HTML, CSS, TailwindCSS, Bootstrap, Github, Bitbucket ,JIRASoftware]
     return (
         <section id="skills" className="text-white bg-base-100">
             <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">

@@ -1,5 +1,6 @@
 import { Link} from 'react-scroll'
 import resume from "../Resume.pdf"
+import React from "react";
 
 function Navbar() {
     return (
@@ -27,6 +28,7 @@ function Navbar() {
                     <li><a className="text-gray-400 hover:text-white"><Link activeClass="text-white" to="skills" spy={true} smooth={true} offset={-70} duration={500}>Skills</Link></a></li>
                 </ul>
             </div>
+
             <div className="navbar-end">
                 <a className="group relative inline-flex items-center overflow-hidden rounded border border-current px-6 py-3 mr-3 text-gray-600 hover:text-white focus:outline-none focus:ring active:text-indigo-500" href={resume} target="_blank">
                     <span className="absolute right-0 translate-x-full transition-transform group-hover:-translate-x-4">
