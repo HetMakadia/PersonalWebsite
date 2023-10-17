@@ -128,6 +128,26 @@ export const AWSLambda = {
     iconLink: "https://upload.wikimedia.org/wikipedia/commons/e/e9/Amazon_Lambda_architecture_logo.png"
 }
 
+export const CSharp = {
+    name: "C#",
+    iconLink: "https://upload.wikimedia.org/wikipedia/commons/b/bd/Logo_C_sharp.svg"
+}
+
+export const DOTNET = {
+    name: ".NET Framework",
+    iconLink: "https://www.vectorlogo.zone/logos/dotnet/dotnet-icon.svg"
+}
+
+export const VisualStudio = {
+    name: "Visual Studio",
+    iconLink: "https://visualstudio.microsoft.com/wp-content/uploads/2021/10/Product-Icon.svg"
+}
+
+export const SQLServer = {
+    name: "SQL Server",
+    iconLink: "https://www.cdnlogo.com/logos/m/6/microsoft-sql-server.svg"
+}
+
 
 
 

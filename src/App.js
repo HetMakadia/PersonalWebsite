@@ -16,9 +16,9 @@ function App() {
                   <Navbar/>
               </header>
               <LandingPage/>
+              <WorkExperience/>
               <Education/>
               <Projects/>
-              <WorkExperience/>
               <Skills/>
               <Contact/>
           </div>

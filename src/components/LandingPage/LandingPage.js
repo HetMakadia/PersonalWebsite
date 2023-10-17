@@ -24,7 +24,7 @@ function LandingPage() {
                     <Link className="group relative rounded-xl inline-block text-sm font-medium focus:outline-none focus:ring text-base-100" to="contact" spy={true} smooth={true} offset={-70} duration={500}>
                         <span className="absolute inset-0 border border-primary group-active:border-primary"/>
                         <span className="block border border-neutral bg-primary px-12 py-3 transition-transform active:border-primary active:bg-primary group-hover:-translate-x-1 group-hover:-translate-y-1">
-                         <a>Hire Me</a>
+                         <a>Contact Me</a>
                         </span>
                     </Link>
                 </div>
