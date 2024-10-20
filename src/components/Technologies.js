@@ -148,6 +148,16 @@ export const SQLServer = {
     iconLink: "https://www.cdnlogo.com/logos/m/6/microsoft-sql-server.svg"
 }
 
+export const TypeScript = {
+    name: "TypeScript",
+    iconLink: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg"
+}
+
+export const AzureDevOpsServer = {
+    name: "Azure DevOps Server",
+    iconLink: "https://upload.wikimedia.org/wikipedia/commons/2/22/Cib-azure-devops_%28CoreUI_Icons_v1.0.0%29.svg"
+}
+
 
 
 

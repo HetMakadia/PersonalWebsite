@@ -4,7 +4,7 @@ import React from "react";
 
 function Navbar() {
     return (
-        <nav className="navbar bg-base-100 p-4">
+        <nav className="navbar bg-base-100 p-4 select-none">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -12,8 +12,8 @@ function Navbar() {
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 font-bold">
                         <li><a className="text-gray-400 hover:text-white"><Link activeClass="text-white" to="workexperience" spy={true} smooth={true} offset={-70} duration={500}>Work Experience</Link></a></li>
-                        <li><a className="text-gray-400 hover:text-white"><Link activeClass="text-white" to="education" spy={true} smooth={true} offset={-70} duration={500}>Education</Link></a></li>
                         <li><a className="text-gray-400 hover:text-white"><Link activeClass="text-white" to="projects" spy={true} smooth={true} offset={-70} duration={500}>Projects</Link></a></li>
+                        <li><a className="text-gray-400 hover:text-white"><Link activeClass="text-white" to="education" spy={true} smooth={true} offset={-70} duration={500}>Education</Link></a></li>
                         <li><a className="text-gray-400 hover:text-white"><Link activeClass="text-white" to="skills" spy={true} smooth={true} offset={-70} duration={500}>Skills</Link></a></li>
                     </ul>
                 </div>
@@ -23,8 +23,8 @@ function Navbar() {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 font-bold">
                     <li><a className="text-gray-400 hover:text-white"><Link activeClass="text-white" to="workexperience" spy={true} smooth={true} offset={-70} duration={500}>Work Experience</Link></a></li>
-                    <li><a className="text-gray-400 hover:text-white"><Link activeClass="text-white" to="education" spy={true} smooth={true} offset={-70} duration={500}>Education</Link></a></li>
                     <li><a className="text-gray-400 hover:text-white"><Link activeClass="text-white" to="projects" spy={true} smooth={true} offset={-70} duration={500}>Projects</Link></a></li>
+                    <li><a className="text-gray-400 hover:text-white"><Link activeClass="text-white" to="education" spy={true} smooth={true} offset={-70} duration={500}>Education</Link></a></li>
                     <li><a className="text-gray-400 hover:text-white"><Link activeClass="text-white" to="skills" spy={true} smooth={true} offset={-70} duration={500}>Skills</Link></a></li>
                 </ul>
             </div>

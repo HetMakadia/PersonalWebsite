@@ -4,10 +4,10 @@ import {Link} from "react-scroll";
 
 function LandingPage() {
     return (
-        <section id="main" className=" items-center bg-base-100 content-center grid grid-cols-2">
+        <section id="main" className=" items-center bg-base-100 content-center grid grid-cols-2 select-none">
             <div className="col-span-2 lg:col-span-1 justify-self-center text-info p-14 lg:p-24">
                 <h1 className="main-heading">
-                    Hi 👋, <br/>   I'm <span className="font-bold text-gray-400">Het Makadia</span>, <br/> <span className="font-bold text-gray-600">Full-Stack</span> Developer
+                    Hi 👋, <br/>   I'm <span className="font-bold text-gray-400">Het Makadia</span>, <br/> <span className="font-bold text-gray-600">Software</span> Developer
                 </h1>
                 {/*<h1 className="main-heading">*/}
                 {/*    Hi 👋, <br/>   I'm <span className="font-bold text-orange-600">Het Makadia</span>, <br/> <span className="font-bold text-pink-600">Full-Stack</span> Developer*/}

@@ -32,7 +32,7 @@ function Contact() {
     };
 
     return (
-        <section id="contact" className="text-white bg-base-100">
+        <section id="contact" className="text-white bg-base-100 select-none">
             <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
                 <div className="mx-auto max-w-lg text-center">
                     <h2 className="text-3xl font-bold lg:text-5xl">Contact Me.</h2>
@@ -49,20 +49,20 @@ function Contact() {
                                     Het Makadia
                                 </a>
                                 <br/>
-                                <a href="" className=" mt-2 text-lg font-bold text-gray-400">
-                                    (657) 295-9821
-                                </a>
+                                {/*<a href="tel:+16572959821" className=" mt-2 text-lg font-bold text-gray-400">*/}
+                                {/*    (657) 295-9821*/}
+                                {/*</a>*/}
                                 <br/>
-                                <a href="" className="mt-2 text-lg font-bold text-gray-400">
+                                <a href="mailto: hetmakadia.28@gmail.com" className="mt-2 text-lg font-bold text-gray-400">
                                     hetmakadia.28@gmail.com
                                 </a>
                                 <address className=" not-italic text-lg font-bold text-gray-400">
-                                    Long Beach, CA
+                                    California, United States
                                 </address>
                                 <br/>
                                 <br/>
                                 <div className="flex justify-center space-x-6 text-white">
-                                    <a href="https://www.linkedin.com/in/hetmakadia-2808/" target="_blank">
+                                    <a href="https://www.linkedin.com/in/hetmakadia/" target="_blank">
                                         <svg  xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 link" to="" fill="currentColor" viewBox="0 0 24 24" >
                                             <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/>
                                         </svg>

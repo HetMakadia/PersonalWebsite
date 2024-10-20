@@ -13,19 +13,19 @@ import {
 
 export const WorkExperienceList = [
     {
-        companyName: "M. S. International",
+        companyName: "MSI Surfaces",
         link: "https://www.msisurfaces.com/",
         position: "Associate Software Developer",
         startDate: "October, 2023",
         endDate: "Current",
-        responsibilities: "Develop, maintain, and support company’s software application using .NET, C#, SQL, and APIs.\n" +
+        responsibilities: "Develop, maintain, and support company’s software application using ASP.NET, C#, SQL, and APIs.\n" +
+            "Review and Update the tasks using JIRA software and company guidelines.\n" +
             "Responsible for reviewing, analyzing and modifying software programs and systems.\n" +
             "Encode, test, debug and document programs based on pre-established guidelines, programming knowledge and judgement to plan and accomplish tasks.\n" +
-            "Manage multiple projects and troubleshoot applications.\n" +
             "Provide accurate status on programming solutions.\n" +
             "Perform additional duties as required and/or requested. ",
 
-        skillsUsed: [DOTNET, CSharp, SQLServer, VisualStudio],
+        skillsUsed: [DOTNET, CSharp, SQLServer, VisualStudio, JIRASoftware],
     },
     {
         companyName: "EMPLOYERS Insurance Group, Inc.",
@@ -33,13 +33,12 @@ export const WorkExperienceList = [
         position: "Application Development Intern",
         startDate: "June, 2022",
         endDate: "May, 2023",
-        responsibilities: "Contributed in the transformation of Excel-based app and records into a modern, user-friendly web application, Access Report." +
-                            "Utilized Angular v16 and its tools including Material UI and Angular Routes to develop user friendly interface and ease navigations." +
-                            "Utilized Java, Spring boot and to develop application, leveraging industry-standard tools and frameworks for efficient and robust development." +
-                            "Integrated MongoDB as the backend database, ensuring efficient storage, retrieval, and management of data within the Access Report platform." +
-                            "Successfully followed Agile Methodology, ensuring flexibility and iteration throughout the development process." +
-                            "Efficiently tracked project progress, managed tasks, and collaborated seamlessly with team members using JIRA Software/Boards." +
-                            "Achieved timely project delivery through streamlined project management and efficient development cycles.",
+        responsibilities: "Contributed in the transformation of Excel-based app and records into a modern, user-friendly web application, Access Report. " +
+                            "Utilized Angular v16 and its tools including Material UI and Angular Routes to develop user friendly interface and ease navigations. " +
+                            "Integrated MongoDB as the backend database, ensuring efficient storage, retrieval, and management of data within the Access Report platform. " +
+                            "Successfully followed Agile Methodology, ensuring flexibility and iteration throughout the development process. " +
+                            "Efficiently tracked project progress, managed tasks, and collaborated seamlessly with team members using JIRA Software/Boards. " +
+                            "Achieved timely project delivery through streamlined project management and efficient development cycles. ",
 
         skillsUsed: [Angular, Java, HTML, CSS, MongoDB, JavaScript, Bitbucket,JIRASoftware],
     },
@@ -49,7 +48,7 @@ export const WorkExperienceList = [
         position: "Accessible Content Developer",
         startDate: "Aug, 2021",
         endDate: "May, 2022",
-        responsibilities: "Ensured accessibility of various document formats (PDF, Word, PowerPoint, Excel, etc.) upon request. " +
+        responsibilities: "Ensured accessibility of various document formats (PDF, Word, PowerPoint, Excel, etc.) upon request. \n" +
             "Utilized Adobe and Microsoft Apps, employing OCR scanning and Accessibility Checker functions to make documents accessible for all users.\n" +
             "Co-ordinated closely with Instructional Designers and Subject Matter Experts to develop accessible course materials for online and hybrid courses.\n" +
             "Worked with diverse formats (print, graphics, video, animation, multimedia) to optimize accessibility and inclusivity.",
