@@ -30,13 +30,12 @@ export const WorkExperienceList = [
         position: "Associate Software Developer",
         startDate: "October, 2023",
         endDate: "Current",
-        responsibilities: "Develop, maintain, and support company’s software applications using .NET Framework, Bootstrap, C#, SQL, and APIs, ensuring functionality aligns with business needs.\n" +
-            "Review, analyze and manage multiple projects while providing updates on solutions through JIRA.\n" +
-            "Encode, test, debug and document programs based on pre-established guidelines, programming knowledge and judgement to plan and accomplish tasks.\n" +
-            "Provide accurate status on programming solutions.\n" +
-            "Perform additional duties as required and/or requested. ",
+        responsibilities: "Maintain and enhance 8+ internal enterprise applications using .NET Framework, C#, JavaScript, SQL Server, Bootstrap, and REST APIs, focusing on modernizing UI, improving backend logic, and aligning with evolving business workflows. " +
+            "Designed and deployed a Cycle Count Dashboard that enabled warehouse teams to track and filter inventory data in real time—replacing manual Excel-based processes and improving operational visibility." +
+            "Supported the transition to NetSuite ERP by updating stored procedures, adapting database structures, and modifying backend logic to ensure system compatibility." +
+            "Use JIRA to manage tasks, report bugs, and communicate progress with team leads—helping prioritize issues and keep development timelines on track.",
 
-        skillsUsed: [DOTNET, Bootstrap, CSharp, SQLServer, VisualStudio, JIRASoftware],
+        skillsUsed: [DOTNET, Bootstrap, JavaScript, CSharp, SQLServer, VisualStudio, JIRASoftware],
     },
     {
         companyName: "EMPLOYERS Insurance Group, Inc.",
@@ -44,11 +43,11 @@ export const WorkExperienceList = [
         position: "Application Development Intern",
         startDate: "June, 2022",
         endDate: "May, 2023",
-        responsibilities: "Contributed to the transformation of Excel-based app and records into a modern, user-friendly web application, Access Report." +
-                            "Utilized Angular v16 and TypeScript its tools including Material UI and Angular Routes to develop user friendly interface and ease navigations" +
-                            "Utilized Java to develop application, leveraging industry-standard tools and frameworks for efficient and robust development." +
-                            "Integrated MongoDB as the backend database, ensuring efficient storage, retrieval, and management of data within the Access Report platform." +
-                            "Efficiently tracked project progress, managed tasks, and collaborated seamlessly with team members using JIRA Software/Boards and following Agile methodology."
+        responsibilities: "Transformed an Excel-based application into a modern web platform,\n" +
+            "Access Report, using Angular v16, TypeScript, Material UI, Angular Routes,\n" +
+            "and Java, with MongoDB for backend data management, efficiently making the Approval Process faster around 40%.\n" +
+            "Collaborated in an Agile environment, leveraging JIRA for project tracking and task management, ensuring seamless\n" +
+            "team coordination and efficient development, enabling the completion of the project 1 month ahead of schedule."
                             ,
 
         skillsUsed: [Angular, Java, HTML, CSS, MongoDB, TypeScript, Bitbucket,JIRASoftware],
