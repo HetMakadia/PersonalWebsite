@@ -18,16 +18,33 @@ import stuxpert from "./stuxpert.png"
 import web from "./web.jpeg"
 import console from "./console.png"
 import databaseimg from "./database.png"
+import supremecarbon from "./supremecarbon.png"
 
 export const projects = [
     {
+        logo: supremecarbon,
+        name: "Supreme Carbon Website",
+        description: "Designed and developed the official website for Supreme Carbon, a manufacturing business in India, using React.js, Firebase, Tailwind CSS, increasing user engagement by 20% and improving mobile experience. " +
+            "Managed hosting, domain, and deployment on GitHub Pages, delivering a full-stack solution.",
+        techUsed: [React, Firebase, TailwindCSS, Github, GoogleMapsAPI],
+        github: "Private"
+    },
+
+    {
         logo: rooster,
         name: "Rooster - Roommate Finder",
-        description: "Contributed to the development of a roommate finder app as a key member of a collaborative team for a Senior Project.\n" +
-            "Analyzed the need for the app and created essential software development documents.\n" +
-            "Actively participated in coding and testing phases, ensuring the app met the specific requirements of users seeking compatible roommates.\n" +
-            "Accomplished a range of features, including user matching, user search, messaging capabilities, mini games, post creation, and account management functionalities.",
+        description: "Co-developed Rooster - a roommate finder web application for a Senior Project, implementing features such as user matching, advanced search filters, in-app messaging, mini-games, and account management to address the needs of students and professionals seeking compatible roommates" +
+            "Developed a multi-page roommate finder app with React Router v6, Context API, and custom hooks for authentication, chat, and search filters. Implemented lazy loading, real-time messaging via Firebase Realtime Database, and debounced search filtering for large datasets.",
         techUsed: [React, Firebase, TailwindCSS, Github],
+        github: "Private"
+    },
+
+    {
+        logo: web,
+        name: "Real Estate Website",
+        description: "Developed a website for a realtor - real world client, contributing to both frontend and backend development while gathering client's requirement and following SDLC." +
+            "Created an admin dashboard with controlled components, API-driven Google Maps integration, and Calendly scheduling. Optimized large property listings using React.memo and list virtualization, backed by SQL stored procedures for CRUD operations.",
+        techUsed: [React, GoogleMapsAPI, CalendlyAPI, Github],
         github: "Private"
     },
 
@@ -52,16 +69,7 @@ export const projects = [
         techUsed2: [ HTML, CSS, JavaScript],
         github2: "https://github.com/HetMakadia/hetmakadia.github.io"
     },
-    {
-        logo: web,
-        name: "Real Estate Website",
-        description: "Played a vital role as a member of a collaborative team of four in the development of a website for a realtor, contributing to both frontend and backend development.\n" +
-            "Successfully implemented key features such as the Google Maps API, Calendly API, and Admin Panel to support the growth of the realtor's business.\n" +
-            "Conducted a thorough analysis to gather insights and meet client needs and requirements.\n" +
-            "Utilized software development life cycle documents and graphs to closely observe and analyze results, driving continuous improvement and optimization.",
-        techUsed: [React, GoogleMapsAPI, CalendlyAPI, Github],
-        github: "Private"
-    },
+
 
     {
         logo: databaseimg,
