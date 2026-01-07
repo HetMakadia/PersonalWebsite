@@ -1,6 +1,6 @@
-import logo from './logo.svg';
-import { useEffect, useRef, useState } from "react";
-import './App.css';
+import { useEffect, useRef } from "react";
+import "./App.css";
+
 import Navbar from "./components/Navbar/Navbar";
 import LandingPage from "./components/LandingPage/LandingPage";
 import Education from "./components/Education/Education";
@@ -10,17 +10,17 @@ import Skills from "./components/Skills/Skills";
 import Contact from "./components/Contact/Contact";
 
 const LOG_VISIT_URL = "https://logvisit-pzx5xq63aa-uc.a.run.app";
-const ATTACH_GPS_URL =
-    "https://us-central1-myportfolio-fbc40.cloudfunctions.net/attachGps";
-
+const ATTACH_GPS_URL = "https://attachgps-pzx5xq63aa-uc.a.run.app";
 
 function App() {
-
     const visitIdRef = useRef(null);
-    const [gpsStatus, setGpsStatus] = useState("");
 
-// Auto log visit (IP-based geo) on load
+    // 1) Log visit (IP-based approximate location) - log only once per tab session
     useEffect(() => {
+        const alreadyLogged = sessionStorage.getItem("visitLogged") === "1";
+        if (alreadyLogged) return;
+        sessionStorage.setItem("visitLogged", "1");
+
         (async () => {
             try {
                 const resp = await fetch(LOG_VISIT_URL, {
@@ -30,28 +30,29 @@ function App() {
                 });
 
                 const json = await resp.json();
-                if (json?.visitId) visitIdRef.current = json.visitId;
+                if (json?.visitId) {
+                    visitIdRef.current = json.visitId;
+                    sessionStorage.setItem("visitId", json.visitId); // optional: keep it around
+                }
             } catch {
                 // ignore
             }
         })();
     }, []);
 
-// Call this when user clicks a button (GPS permission prompt)
-    const enablePreciseLocation = () => {
-        if (!("geolocation" in navigator)) {
-            setGpsStatus("Geolocation not supported.");
-            return;
-        }
+    // 2) Immediately request GPS on page load (precise location if user allows)
+    useEffect(() => {
+        if (!("geolocation" in navigator)) return;
 
-        setGpsStatus("Requesting permission...");
+        const waitForVisitIdThenAskGps = () => {
+            // if we saved it earlier, reuse it
+            if (!visitIdRef.current) {
+                const stored = sessionStorage.getItem("visitId");
+                if (stored) visitIdRef.current = stored;
+            }
 
-        const tryAttach = () => {
-            const visitId = visitIdRef.current;
-
-            // Wait until logVisit has returned the visitId
-            if (!visitId) {
-                setTimeout(tryAttach, 300);
+            if (!visitIdRef.current) {
+                setTimeout(waitForVisitIdThenAskGps, 300);
                 return;
             }
 
@@ -64,52 +65,42 @@ function App() {
                             method: "POST",
                             headers: { "Content-Type": "application/json" },
                             body: JSON.stringify({
-                                visitId,
+                                visitId: visitIdRef.current,
                                 lat: latitude,
                                 lon: longitude,
                                 accuracy,
                             }),
                         });
-
-                        setGpsStatus("Precise location saved.");
                     } catch {
-                        setGpsStatus("Could not save precise location.");
+                        // ignore
                     }
                 },
-                () => setGpsStatus("Permission denied or location unavailable."),
+                () => {
+                    // user denied / unavailable -> do nothing
+                },
                 { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
             );
         };
 
-        tryAttach();
-    };
-
-
-
-    useEffect(() => {
-        enablePreciseLocation();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+        waitForVisitIdThenAskGps();
     }, []);
 
     return (
-      <div className=" bg-neutral  h-screen grid grid-cols-12">
+        <div className="bg-neutral h-screen grid grid-cols-12">
+            <div className="h-full col-span-12">
+                <header className="sticky absolute top-0 left-0 right-0 col-span-12 z-30">
+                    <Navbar />
+                </header>
 
-          <div className="h-full  col-span-12">
-              <header className="sticky absolute top-0 left-0 right-0 col-span-12 z-30">
-                  <Navbar/>
-              </header>
-              <LandingPage/>
-              <WorkExperience/>
-              <Projects/>
-              <Education/>
-              <Skills/>
-              <Contact />
-          </div>
-
-      </div>
-
-
-  );
+                <LandingPage />
+                <WorkExperience />
+                <Projects />
+                <Education />
+                <Skills />
+                <Contact />
+            </div>
+        </div>
+    );
 }
 
 export default App;
