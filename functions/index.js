@@ -10,11 +10,11 @@ admin.initializeApp();
 // ✅ CORS middleware (allows localhost + your hosting domains)
 const corsHandler = cors({
   origin: [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
+    "https://hetmakadia.com",
+    "https://www.hetmakadia.com",
     "https://myportfolio-fbc40.web.app",
     "https://myportfolio-fbc40.firebaseapp.com",
-    "https://hetmakadia.com"
+    "http://localhost:3000",
   ],
   methods: ["POST", "OPTIONS"],
   allowedHeaders: ["Content-Type"],
