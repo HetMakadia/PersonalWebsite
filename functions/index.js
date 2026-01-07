@@ -14,6 +14,7 @@ const corsHandler = cors({
     "http://127.0.0.1:3000",
     "https://myportfolio-fbc40.web.app",
     "https://myportfolio-fbc40.firebaseapp.com",
+    "https://hetmakadia.com"
   ],
   methods: ["POST", "OPTIONS"],
   allowedHeaders: ["Content-Type"],
