@@ -9,8 +9,12 @@ import WorkExperience from "./components/WorkExperience/WorkExperience";
 import Skills from "./components/Skills/Skills";
 import Contact from "./components/Contact/Contact";
 
-const LOG_VISIT_URL = "https://logvisit-pzx5xq63aa-uc.a.run.app";
-const ATTACH_GPS_URL = "https://attachgps-pzx5xq63aa-uc.a.run.app";
+const LOG_VISIT_URL =
+    "https://us-central1-myportfolio-fbc40.cloudfunctions.net/logVisit";
+
+const ATTACH_GPS_URL =
+    "https://us-central1-myportfolio-fbc40.cloudfunctions.net/attachGps";
+
 
 function App() {
     const visitIdRef = useRef(null);
