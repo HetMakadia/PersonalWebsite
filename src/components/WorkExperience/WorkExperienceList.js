@@ -24,18 +24,27 @@ import {
 } from "../Technologies";
 
 export const WorkExperienceList = [
+    // {
+    //     companyName: "MSI Surfaces",
+    //     link: "https://www.msisurfaces.com/",
+    //     position: "Associate Software Developer",
+    //     startDate: "October, 2023",
+    //     endDate: "Current",
+    //     responsibilities: "Developing and maintaining 8+ internal enterprise applications using .NET Framework, C#, JavaScript, SQLServer, Bootstrap, and REST APIs—modernizing UI/UX and backend workflows. " +
+    //         "Built and deployed a Cycle Count Dashboard that replaced manual Excel tracking, improving real-time visibility and cutting process time by 30%." +
+    //         "Supporting NetSuite ERP migration by updating stored procedures, modifying schemas, and adapting backend logic" +
+    //         "Using JIRA to manage tasks, track bugs, and communicate updates with team leads for better sprint planning and delivery",
+    //
+    //     skillsUsed: [DOTNET, Bootstrap, JavaScript, CSharp, SQLServer, VisualStudio, JIRASoftware],
+    // },+
     {
         companyName: "MSI Surfaces",
         link: "https://www.msisurfaces.com/",
         position: "Associate Software Developer",
         startDate: "October, 2023",
         endDate: "Current",
-        responsibilities: "Developing and maintaining 8+ internal enterprise applications using .NET Framework, C#, JavaScript, SQLServer, Bootstrap, and REST APIs—modernizing UI/UX and backend workflows. " +
-            "Built and deployed a Cycle Count Dashboard that replaced manual Excel tracking, improving real-time visibility and cutting process time by 30%." +
-            "Supporting NetSuite ERP migration by updating stored procedures, modifying schemas, and adapting backend logic" +
-            "Using JIRA to manage tasks, track bugs, and communicate updates with team leads for better sprint planning and delivery",
-
-        skillsUsed: [DOTNET, Bootstrap, JavaScript, CSharp, SQLServer, VisualStudio, JIRASoftware],
+        responsibilities: "Developing and maintaining multiple internal enterprise applications and modernising UI/UX and backend workflows. Designed and launched a dashboard that replaced manual processes, improving real-time visibility and reducing overall process time by 30%. Supporting NetSuite ERP migration by updating stored procedures, modifying schemas, and adapting backend logic. Using JIRA to manage tasks, track bugs, and communicate updates with team leads for better sprint planning and delivery.",
+        skillsUsed: [React, JavaScript, DOTNET, Java,  CSharp, Bootstrap, SQLServer, JIRASoftware],
     },
     {
         companyName: "EMPLOYERS Insurance Group, Inc.",

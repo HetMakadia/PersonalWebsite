@@ -25,7 +25,7 @@ export const GoogleMapsAPI = {
 
 export const CalendlyAPI = {
     name: "Calendly API",
-    iconLink: "https://github.com/wappalyzer/wappalyzer/blob/master/src/drivers/webextension/images/icons/Calendly.svg"
+    iconLink: "https://cdn.simpleicons.org/calendly"
 }
 
 export const Java = {
@@ -95,22 +95,22 @@ export const NodeJS = {
 
 export const MSWord = {
     name: "MS Word",
-    iconLink: "https://upload.wikimedia.org/wikipedia/commons/f/fd/Microsoft_Office_Word_%282019%E2%80%93present%29.svg"
+    iconLink: "https://upload.wikimedia.org/wikipedia/commons/e/e8/Microsoft_Office_Word_%282025%E2%80%93present%29.svg"
 }
 
 export const MSExcel = {
     name: "MS Excel",
-    iconLink: "https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg"
+    iconLink: "https://upload.wikimedia.org/wikipedia/commons/6/60/Microsoft_Office_Excel_%282025%E2%80%93present%29.svg"
 }
 
 export const MSPowerpoint = {
     name: "MS Powerpoint",
-    iconLink: "https://upload.wikimedia.org/wikipedia/commons/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg"
+    iconLink: "https://upload.wikimedia.org/wikipedia/commons/d/df/Microsoft_Office_PowerPoint_%282025%E2%80%93present%29.svg"
 }
 
 export const Sharepoint = {
     name: "Sharepoint",
-    iconLink: "https://upload.wikimedia.org/wikipedia/commons/e/e1/Microsoft_Office_SharePoint_%282019%E2%80%93present%29.svg"
+    iconLink: "https://upload.wikimedia.org/wikipedia/commons/2/28/Microsoft_Office_SharePoint_%282025%E2%80%93present%29.svg"
 }
 
 export const Bitbucket = {
@@ -145,7 +145,7 @@ export const VisualStudio = {
 
 export const SQLServer = {
     name: "SQL Server",
-    iconLink: "https://www.cdnlogo.com/logos/m/6/microsoft-sql-server.svg"
+    iconLink: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg"
 }
 
 export const TypeScript = {
