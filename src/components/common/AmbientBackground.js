@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 
 const noiseSvg =
@@ -33,6 +33,60 @@ function Spotlight() {
     return <motion.div className="absolute inset-0" style={{ background }} />;
 }
 
+const FIREFLY_COUNT = 18;
+
+function Fireflies() {
+    const reducedMotion = useMemo(
+        () => typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+        []
+    );
+
+    const fireflies = useMemo(() => {
+        if (reducedMotion) return [];
+        return Array.from({ length: FIREFLY_COUNT }).map((_, i) => ({
+            id: i,
+            size: 2 + Math.random() * 2,
+            top: Math.random() * 100,
+            left: Math.random() * 100,
+            driftX: 40 + Math.random() * 90,
+            driftY: 40 + Math.random() * 90,
+            duration: 16 + Math.random() * 20,
+            delay: Math.random() * -30,
+        }));
+    }, [reducedMotion]);
+
+    if (reducedMotion) return null;
+
+    return (
+        <>
+            {fireflies.map((f) => (
+                <motion.span
+                    key={f.id}
+                    className="absolute rounded-full bg-amber-100"
+                    style={{
+                        top: `${f.top}%`,
+                        left: `${f.left}%`,
+                        width: f.size,
+                        height: f.size,
+                        boxShadow: "0 0 6px 2px rgba(255, 244, 214, 0.55)",
+                    }}
+                    animate={{
+                        x: [0, f.driftX, -f.driftX * 0.6, 0],
+                        y: [0, -f.driftY, f.driftY * 0.5, 0],
+                        opacity: [0, 0.7, 0.15, 0.6, 0],
+                    }}
+                    transition={{
+                        duration: f.duration,
+                        delay: f.delay,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                    }}
+                />
+            ))}
+        </>
+    );
+}
+
 export function AmbientBackground() {
     return (
         <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-10 overflow-hidden bg-base-100 select-none">
@@ -54,6 +108,8 @@ export function AmbientBackground() {
                 className="absolute inset-0 opacity-[0.05] mix-blend-overlay"
                 style={{ backgroundImage: noiseDataUrl, backgroundRepeat: "repeat" }}
             />
+
+            <Fireflies />
 
             <Spotlight />
         </div>
