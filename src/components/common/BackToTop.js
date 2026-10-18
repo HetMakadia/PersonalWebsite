@@ -18,7 +18,7 @@ export function BackToTop() {
                 <motion.button
                     aria-label="Back to top"
                     onClick={() => animateScroll.scrollToTop({ duration: 500 })}
-                    className="fixed bottom-6 right-6 z-40 flex h-11 w-11 items-center justify-center rounded-full border border-gray-700 bg-neutral text-white shadow-xl hover:border-white"
+                    className="fixed bottom-6 right-6 z-40 flex h-11 w-11 items-center justify-center rounded-full border border-base-300 bg-neutral text-base-content shadow-xl hover:border-base-content"
                     initial={{ opacity: 0, y: 16, scale: 0.8 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 16, scale: 0.8 }}

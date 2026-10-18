@@ -8,6 +8,17 @@ html {
   scroll-behavior: smooth;
 }
 
+/* RGB triplets consumed by AmbientBackground's inline rgba(var(--x), a) styles */
+[data-theme="dark"] {
+  --ambient-ink: 255, 255, 255;
+  --firefly-ink: 255, 244, 214;
+}
+
+[data-theme="light"] {
+  --ambient-ink: 43, 36, 32;
+  --firefly-ink: 120, 90, 40;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -22,26 +33,44 @@ code {
     monospace;
 }
 
-::selection {
+[data-theme="dark"] ::selection {
   background-color: #ffffff;
   color: #131313;
+}
+
+[data-theme="light"] ::selection {
+  background-color: #2b2420;
+  color: #f5f1ea;
 }
 
 ::-webkit-scrollbar {
   width: 10px;
 }
 
-::-webkit-scrollbar-track {
+[data-theme="dark"] ::-webkit-scrollbar-track {
   background: #1c1c1c;
 }
 
-::-webkit-scrollbar-thumb {
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
   background: #494949;
   border-radius: 999px;
 }
 
-::-webkit-scrollbar-thumb:hover {
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
   background: #868686;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-track {
+  background: #efe8dd;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: #c7b89a;
+  border-radius: 999px;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+  background: #a68a64;
 }
 
 @keyframes float-slow {

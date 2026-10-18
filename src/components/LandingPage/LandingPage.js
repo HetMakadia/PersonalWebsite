@@ -23,7 +23,7 @@ function LandingPage() {
                 variants={container}
             >
                 <motion.h1 className="main-heading" variants={item}>
-                    Hi 👋, <br/>   I'm <span className="font-bold text-gray-400">Het Makadia</span>, <br/> <span className="font-bold text-gray-600">Software</span> Developer
+                    Hi 👋, <br/>   I'm <span className="font-bold text-base-content/70">Het Makadia</span>, <br/> <span className="font-bold text-base-content">Software</span> Developer
                 </motion.h1>
                 <br/>
                 <motion.p className="main-text" variants={item}>
@@ -61,7 +61,7 @@ function LandingPage() {
             >
                 <Link to="workexperience" spy={true} smooth={true} offset={-70} duration={500} className="cursor-pointer">
                     <motion.svg
-                        className="h-6 w-6 text-gray-500"
+                        className="h-6 w-6 text-base-content/40"
                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                         animate={{ y: [0, 8, 0] }}
                         transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}

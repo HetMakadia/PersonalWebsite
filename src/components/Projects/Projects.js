@@ -4,7 +4,7 @@ import {Reveal, RevealGroup, RevealItem} from "../common/Reveal";
 
 function Projects() {
     return (
-        <section id="projects" className="text-white select-none">
+        <section id="projects" className="text-base-content select-none">
             <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
                 <Reveal className="mx-auto max-w-lg text-center">
                     <h2 className="text-3xl font-bold lg:text-5xl">Things I've learned and built.</h2>
@@ -16,14 +16,14 @@ function Projects() {
                             as="a"
                             whileHover={{ y: -6 }}
                             transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                            className="block grid grid-cols-12 rounded-xl border border-gray-800 p-8 shadow-xl transition-colors duration-300 bg-neutral hover:border-white hover:shadow-2xl hover:shadow-gray-500/20"
+                            className="block grid grid-cols-12 rounded-xl border border-base-300 p-8 shadow-xl transition-colors duration-300 bg-neutral hover:border-base-content hover:shadow-2xl hover:shadow-base-content/10"
                             href={project.github !== "Private" && project.github !== "Console" ? project.github : undefined}
                             target={project.github !== "Private" && project.github !== "Console" ? "_blank" : undefined}
                             rel="noreferrer"
                         >
                             <img className="col-span-12 h-12" src={project.logo} alt={project.name}/>
-                            <h2 className="col-span-12 mt-4 text-2xl font-bold text-white">{project.name}</h2>
-                            <p className="col-span-12 mt-1 text-justify text-base text-gray-300">
+                            <h2 className="col-span-12 mt-4 text-2xl font-bold text-base-content">{project.name}</h2>
+                            <p className="col-span-12 mt-1 text-justify text-base text-base-content/70">
                                 {project.description}
                             </p>
                             <br/>
@@ -57,8 +57,8 @@ function Projects() {
                             {project.name2 ?
                                 <div className="col-span-12 grid grid-cols-12">
                                     <br/>
-                                    <h2 className="col-span-12 mt-4 text-2xl font-bold text-white">{project.name2}</h2>
-                                    <p className="col-span-12 mt-1 text-justify text-base text-gray-300">
+                                    <h2 className="col-span-12 mt-4 text-2xl font-bold text-base-content">{project.name2}</h2>
+                                    <p className="col-span-12 mt-1 text-justify text-base text-base-content/70">
                                         {project.description2}
                                     </p>
                                     <br/>

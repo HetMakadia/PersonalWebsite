@@ -29,7 +29,7 @@ import {Reveal, RevealGroup, RevealItem} from "../common/Reveal";
 function Skills() {
     const skillSet = [React, Angular, JavaScript, TypeScript, Java, Python, CSharp, DOTNET, Firebase, MongoDB, SQLServer, JSON, HTML, CSS, VisualStudio, TailwindCSS, Bootstrap, Github, Bitbucket, AzureDevOpsServer, JIRASoftware]
     return (
-        <section id="skills" className="text-white select-none">
+        <section id="skills" className="text-base-content select-none">
             <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
                 <Reveal className="mx-auto max-w-lg text-center">
                     <h2 className="text-3xl font-bold lg:text-5xl">Things I know.</h2>
@@ -40,7 +40,7 @@ function Skills() {
                         <RevealItem
                             key={skill.name}
                             whileHover={{ y: -4 }}
-                            className="block rounded-xl border border-gray-800 p-4 lg:p-8 shadow-xl text-gray-500 transition-colors duration-300 bg-neutral hover:text-white hover:border-white hover:shadow-lg hover:shadow-gray-100/10">
+                            className="block rounded-xl border border-base-300 p-4 lg:p-8 shadow-xl text-base-content/50 transition-colors duration-300 bg-neutral hover:text-base-content hover:border-base-content hover:shadow-lg hover:shadow-base-content/10">
                             <ol className=" relative border-gray-200 dark:border-gray-700 grid grid-cols-2">
                                 <div className="col-span-2 justify-self-center ">
                                     <motion.img

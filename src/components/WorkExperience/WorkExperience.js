@@ -4,7 +4,7 @@ import {Reveal, RevealGroup, RevealItem} from "../common/Reveal";
 
 function WorkExperience() {
     return (
-        <section id="workexperience" className="text-white select-none">
+        <section id="workexperience" className="text-base-content select-none">
             <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
                 <Reveal className="mx-auto max-w-lg text-center">
                     <h2 className="text-3xl font-bold lg:text-5xl">Places I've worked.</h2>
@@ -59,7 +59,7 @@ function WorkExperience() {
                                             <motion.span
                                                 key={skill.name}
                                                 whileHover={{ scale: 1.08, y: -2 }}
-                                                className="m-2 inline-flex border border-black items-center justify-center rounded-full bg-accent px-2.5 py-0.5 text-info transition-colors hover:border-white">
+                                                className="m-2 inline-flex border border-base-content/20 items-center justify-center rounded-full bg-accent px-2.5 py-0.5 text-info transition-colors hover:border-base-content">
                                                     <img className="m-1 h-4" src={skill.iconLink} alt={skill.name}/>
                                                     <p className="whitespace-nowrap text-base">{skill.name}</p>
                                                 </motion.span>

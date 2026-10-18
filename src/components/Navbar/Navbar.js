@@ -1,5 +1,6 @@
 import { Link } from 'react-scroll'
 import React, { useEffect, useState } from "react";
+import { ThemeToggle } from "../common/ThemeToggle";
 
 const navItems = [
     { to: "workexperience", label: "Work Experience" },
@@ -11,8 +12,8 @@ const navItems = [
 function NavLink({ to, label, className = "" }) {
     return (
         <Link
-            className={`relative text-gray-400 transition-colors hover:text-white after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full ${className}`}
-            activeClass="text-white after:w-full"
+            className={`relative text-base-content/50 transition-colors hover:text-base-content after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-base-content after:transition-all after:duration-300 hover:after:w-full ${className}`}
+            activeClass="text-base-content after:w-full"
             to={to}
             spy={true}
             smooth={true}
@@ -43,22 +44,23 @@ function Navbar() {
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100/95 backdrop-blur-md rounded-box w-52 font-bold">
                         {navItems.map((item) => (
-                            <li key={item.to}><a className="text-gray-400 hover:text-white"><NavLink {...item} /></a></li>
+                            <li key={item.to}><a className="text-base-content/50 hover:text-base-content"><NavLink {...item} /></a></li>
                         ))}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-2xl font-bold transition-transform hover:scale-105"><Link activeClass="text-white" to="main" spy={true} smooth={true} offset={-70} duration={500}>Het Makadia</Link></a>
+                <a className="btn btn-ghost normal-case text-2xl font-bold transition-transform hover:scale-105"><Link activeClass="text-base-content" to="main" spy={true} smooth={true} offset={-70} duration={500}>Het Makadia</Link></a>
 
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 font-bold gap-2">
                     {navItems.map((item) => (
-                        <li key={item.to}><a className="text-gray-400 hover:text-white"><NavLink {...item} /></a></li>
+                        <li key={item.to}><a className="text-base-content/50 hover:text-base-content"><NavLink {...item} /></a></li>
                     ))}
                 </ul>
             </div>
 
             <div className="navbar-end">
+                <ThemeToggle />
             </div>
         </nav>
     )

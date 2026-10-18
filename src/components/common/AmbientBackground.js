@@ -11,7 +11,7 @@ const noiseDataUrl = `url("data:image/svg+xml,${encodeURIComponent(noiseSvg)}")`
 function Spotlight() {
     const mouseX = useMotionValue(-500);
     const mouseY = useMotionValue(-500);
-    const background = useMotionTemplate`radial-gradient(500px circle at ${mouseX}px ${mouseY}px, rgba(255,255,255,0.05), transparent 70%)`;
+    const background = useMotionTemplate`radial-gradient(500px circle at ${mouseX}px ${mouseY}px, rgba(var(--ambient-ink), 0.06), transparent 70%)`;
 
     useEffect(() => {
         const canHover = window.matchMedia("(pointer: fine)").matches;
@@ -62,13 +62,14 @@ function Fireflies() {
             {fireflies.map((f) => (
                 <motion.span
                     key={f.id}
-                    className="absolute rounded-full bg-amber-100"
+                    className="absolute rounded-full"
                     style={{
                         top: `${f.top}%`,
                         left: `${f.left}%`,
                         width: f.size,
                         height: f.size,
-                        boxShadow: "0 0 6px 2px rgba(255, 244, 214, 0.55)",
+                        backgroundColor: "rgba(var(--firefly-ink), 0.9)",
+                        boxShadow: "0 0 6px 2px rgba(var(--firefly-ink), 0.5)",
                     }}
                     animate={{
                         x: [0, f.driftX, -f.driftX * 0.6, 0],
@@ -93,16 +94,16 @@ export function AmbientBackground() {
             <div
                 className="absolute inset-0"
                 style={{
-                    backgroundImage: "radial-gradient(rgba(255,255,255,0.09) 1px, transparent 1px)",
+                    backgroundImage: "radial-gradient(rgba(var(--ambient-ink), 0.09) 1px, transparent 1px)",
                     backgroundSize: "26px 26px",
                     maskImage: "linear-gradient(to bottom, transparent, black 12%, black 88%, transparent)",
                     WebkitMaskImage: "linear-gradient(to bottom, transparent, black 12%, black 88%, transparent)",
                 }}
             />
 
-            <div className="absolute -top-24 -left-24 h-[28rem] w-[28rem] rounded-full bg-gray-400/10 blur-3xl animate-blob-drift" />
+            <div className="absolute -top-24 -left-24 h-[28rem] w-[28rem] rounded-full bg-base-content/10 blur-3xl animate-blob-drift" />
             <div className="absolute top-1/3 -right-32 h-[32rem] w-[32rem] rounded-full bg-accent/20 blur-3xl animate-blob-drift" style={{ animationDelay: "-7s" }} />
-            <div className="absolute bottom-0 left-1/4 h-[26rem] w-[26rem] rounded-full bg-gray-500/10 blur-3xl animate-blob-drift" style={{ animationDelay: "-14s" }} />
+            <div className="absolute bottom-0 left-1/4 h-[26rem] w-[26rem] rounded-full bg-base-content/10 blur-3xl animate-blob-drift" style={{ animationDelay: "-14s" }} />
 
             <div
                 className="absolute inset-0 opacity-[0.05] mix-blend-overlay"
