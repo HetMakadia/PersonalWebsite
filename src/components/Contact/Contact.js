@@ -86,22 +86,22 @@ function Contact() {
                             <form action="" className="space-y-4" onSubmit={handleSubmit}>
                                 <div>
                                     <label className="sr-only" htmlFor="name">Name</label>
-                                    <input className="w-full rounded-lg bg-base-100 border-base-300 hover:bg-base-200 hover:border-base-content/40 focus:border-base-content transition-colors p-3 text-sm" placeholder="Name" type="text" value={name} onChange={e => setName(e.target.value)} disabled={isDisabled} required/>
+                                    <input className="w-full rounded-lg bg-base-100 border-base-300 hover:bg-base-200 hover:border-base-content/40 focus:border-base-content transition-colors p-3 text-base sm:text-sm" placeholder="Name" type="text" value={name} onChange={e => setName(e.target.value)} disabled={isDisabled} required/>
                                 </div>
 
                                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                                     <div>
                                         <label className="sr-only" htmlFor="email">Email</label>
-                                        <input className="w-full bg-base-100 rounded-lg border-base-300 hover:bg-base-200 hover:border-base-content/40 focus:border-base-content transition-colors p-3 text-sm" placeholder="Email address" type="email" value={email} onChange={e => setEmail(e.target.value)} disabled={isDisabled} required/>
+                                        <input className="w-full bg-base-100 rounded-lg border-base-300 hover:bg-base-200 hover:border-base-content/40 focus:border-base-content transition-colors p-3 text-base sm:text-sm" placeholder="Email address" type="email" value={email} onChange={e => setEmail(e.target.value)} disabled={isDisabled} required/>
                                     </div>
                                     <div>
                                         <label className="sr-only" htmlFor="phone">Phone</label>
-                                        <input className="w-full bg-base-100 rounded-lg border-base-300 hover:bg-base-200 hover:border-base-content/40 focus:border-base-content transition-colors p-3 text-sm" placeholder="Phone Number" type="tel" value={phone} onChange={e => setPhone(e.target.value)} disabled={isDisabled}/>
+                                        <input className="w-full bg-base-100 rounded-lg border-base-300 hover:bg-base-200 hover:border-base-content/40 focus:border-base-content transition-colors p-3 text-base sm:text-sm" placeholder="Phone Number" type="tel" value={phone} onChange={e => setPhone(e.target.value)} disabled={isDisabled}/>
                                     </div>
                                 </div>
                                 <div>
                                     <label className="sr-only" htmlFor="message">Message</label>
-                                    <textarea disabled={isDisabled} className="w-full bg-base-100 rounded-lg border-base-300 hover:bg-base-200 hover:border-base-content/40 focus:border-base-content transition-colors p-3 text-sm" placeholder="Message" rows="8" value={message} onChange={e => setMessage(e.target.value)} required></textarea>
+                                    <textarea disabled={isDisabled} className="w-full bg-base-100 rounded-lg border-base-300 hover:bg-base-200 hover:border-base-content/40 focus:border-base-content transition-colors p-3 text-base sm:text-sm" placeholder="Message" rows="8" value={message} onChange={e => setMessage(e.target.value)} required></textarea>
                                 </div>
                                 <AnimatePresence>
                                     {status === "sent" &&
