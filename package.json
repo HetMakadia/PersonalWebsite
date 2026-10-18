@@ -2,7 +2,7 @@
   "name": "my-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://hetmakadia.dev",
+  "homepage": "https://hetmakadia.com",
   "dependencies": {
     "@emailjs/browser": "^5.0.3",
     "@material-tailwind/react": "^1.4.2",
