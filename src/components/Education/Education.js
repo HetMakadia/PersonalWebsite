@@ -1,20 +1,20 @@
 import "./Education.css"
 import csulbImg from "./education.jpg"
-import {React} from "../Technologies";
+import {Reveal} from "../common/Reveal";
 
 function Education() {
     return (
         <section id="education" className="text-white bg-base-100 select-none">
             <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
-                <div className="mx-auto max-w-lg text-center">
+                <Reveal className="mx-auto max-w-lg text-center">
                     <h2 className="text-3xl font-bold lg:text-5xl">My Education.</h2>
-                </div>
+                </Reveal>
 
 
                 <div className="grid grid-cols-1 gap-8 mt-8">
                     <div className="content-center justify-self-center">
                         <div className="items-center justify-self-center text-info ">
-                            <div className="card p-4 border border-neutral hover:border-white grid grid-cols-12 lg:card-side bg-neutral hover:bg-base-content/5 shadow-xl w-100">
+                            <Reveal delay={0.1} y={32} className="card p-4 border border-neutral hover:border-white grid grid-cols-12 lg:card-side bg-neutral hover:bg-base-content/5 shadow-xl w-100 transition-all duration-300 hover:shadow-2xl hover:shadow-gray-500/20">
                                 <div className="self-center	col-span-12 lg:p-0 lg:col-span-4 justify-self-center	">
                                     <div className="avatar w-42 lg:w-60">
                                         <div className="w-60 rounded-full">
@@ -36,7 +36,7 @@ function Education() {
                                             Machine Learning, Mobile Application Development, Senior Project.</span> </p>
                                     </div>
                                 </div>
-                            </div>
+                            </Reveal>
                         </div>
                     </div>
                 </div>

@@ -39,10 +39,11 @@ export const revealItemVariants = {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
 };
 
-export function RevealItem({ children, className = "", ...rest }) {
+export function RevealItem({ children, className = "", as = "div", ...rest }) {
+    const Component = motion[as] ?? motion.div;
     return (
-        <motion.div className={className} variants={revealItemVariants} {...rest}>
+        <Component className={className} variants={revealItemVariants} {...rest}>
             {children}
-        </motion.div>
+        </Component>
     );
 }

@@ -1,17 +1,27 @@
 import {projects} from "./ProjectList";
-import {React} from "../Technologies";
+import {motion} from "framer-motion";
+import {Reveal, RevealGroup, RevealItem} from "../common/Reveal";
 
 function Projects() {
     return (
         <section id="projects" className="text-white bg-base-100 select-none">
             <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
-                <div className="mx-auto max-w-lg text-center">
+                <Reveal className="mx-auto max-w-lg text-center">
                     <h2 className="text-3xl font-bold lg:text-5xl">Things I've learned and built.</h2>
-                </div>
-                <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                </Reveal>
+                <RevealGroup className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                     {projects.map((project) =>
-                        <a className="block grid grid-cols-12 rounded-xl border border-gray-800 p-8 shadow-xl transition bg-neutral hover:border-white hover:shadow-gray-500/10">
-                            <img className="col-span-12 h-12" src={project.logo}/>
+                        <RevealItem
+                            key={project.name}
+                            as="a"
+                            whileHover={{ y: -6 }}
+                            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                            className="block grid grid-cols-12 rounded-xl border border-gray-800 p-8 shadow-xl transition-colors duration-300 bg-neutral hover:border-white hover:shadow-2xl hover:shadow-gray-500/20"
+                            href={project.github !== "Private" && project.github !== "Console" ? project.github : undefined}
+                            target={project.github !== "Private" && project.github !== "Console" ? "_blank" : undefined}
+                            rel="noreferrer"
+                        >
+                            <img className="col-span-12 h-12" src={project.logo} alt={project.name}/>
                             <h2 className="col-span-12 mt-4 text-2xl font-bold text-white">{project.name}</h2>
                             <p className="col-span-12 mt-1 text-justify text-base text-gray-300">
                                 {project.description}
@@ -20,8 +30,9 @@ function Projects() {
                             <div className="col-span-8 col-start-1">
                                 {project.techUsed.map((tech) =>
                                     <span
-                                        className="m-2 inline-flex items-center justify-center rounded-full bg-accent px-2.5 py-0.5 text-info">
-                                                <img className="m-1 h-3" src={tech.iconLink}/>
+                                        key={tech.name}
+                                        className="m-2 inline-flex items-center justify-center rounded-full bg-accent px-2.5 py-0.5 text-info transition-transform hover:scale-105">
+                                                <img className="m-1 h-3" src={tech.iconLink} alt={tech.name}/>
                                                 <p className="whitespace-nowrap text-sm">{tech.name}</p>
                                             </span>
                                 )}
@@ -32,14 +43,16 @@ function Projects() {
                                         {project.github}
                                     </button>
                                 </div>) : (<div className="col-span-1 col-start-11">
-                                <a className="inline-block rounded-full border border-indigo-600 p-3 text-indigo-600 hover:bg-indigo-600 hover:text-white focus:outline-none focus:ring active:bg-indigo-500"
-                                   href={project.github} target="_blank">
+                                <motion.span
+                                    whileHover={{ scale: 1.1 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    className="inline-block rounded-full border border-indigo-600 p-3 text-indigo-600 transition-colors hover:bg-indigo-600 hover:text-white focus:outline-none focus:ring active:bg-indigo-500">
                                     <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none"
                                          viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                                               d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                                     </svg>
-                                </a>
+                                </motion.span>
                             </div>)}
                             {project.name2 ?
                                 <div className="col-span-12 grid grid-cols-12">
@@ -53,8 +66,9 @@ function Projects() {
                                     <div className="col-span-8 col-start-1">
                                         {project.techUsed2.map((tech) =>
                                                 <span
-                                                    className="m-2 inline-flex items-center justify-center rounded-full bg-accent px-2.5 py-0.5 text-info">
-                                    <img className="m-1 h-3" src={tech.iconLink}/>
+                                                    key={tech.name}
+                                                    className="m-2 inline-flex items-center justify-center rounded-full bg-accent px-2.5 py-0.5 text-info transition-transform hover:scale-105">
+                                    <img className="m-1 h-3" src={tech.iconLink} alt={tech.name}/>
                                     <p className="whitespace-nowrap text-sm">{tech.name}</p>
                                     </span>
                                         )}
@@ -66,21 +80,23 @@ function Projects() {
                                                 {project.github2}
                                             </button>
                                         </div>) : (<div className="col-span-1 col-start-11">
-                                        <a className="inline-block rounded-full border border-indigo-600 p-3 text-indigo-600 hover:bg-indigo-600 hover:text-white focus:outline-none focus:ring active:bg-indigo-500"
-                                           href={project.github2} target="_blank">
+                                        <motion.span
+                                            whileHover={{ scale: 1.1 }}
+                                            whileTap={{ scale: 0.95 }}
+                                            className="inline-block rounded-full border border-indigo-600 p-3 text-indigo-600 transition-colors hover:bg-indigo-600 hover:text-white focus:outline-none focus:ring active:bg-indigo-500">
                                             <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none"
                                                  viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                      stroke-width="2"
+                                                <path strokeLinecap="round" strokeLinejoin="round"
+                                                      strokeWidth="2"
                                                       d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                                             </svg>
-                                        </a>
+                                        </motion.span>
                                     </div>)}
                                 </div> : null
                             }
-                        </a>
+                        </RevealItem>
                     )}
-                </div>
+                </RevealGroup>
             </div>
         </section>
     )

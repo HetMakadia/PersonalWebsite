@@ -8,6 +8,7 @@ import Projects from "./components/Projects/Projects";
 import WorkExperience from "./components/WorkExperience/WorkExperience";
 import Skills from "./components/Skills/Skills";
 import Contact from "./components/Contact/Contact";
+import { BackToTop } from "./components/common/BackToTop";
 
 const LOG_VISIT_URL =
     "https://us-central1-myportfolio-fbc40.cloudfunctions.net/logVisit";
@@ -102,6 +103,7 @@ function App() {
                 <Education />
                 <Skills />
                 <Contact />
+                <BackToTop />
             </div>
         </div>
     );
