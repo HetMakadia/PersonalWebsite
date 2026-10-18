@@ -1,36 +1,36 @@
-import { collection, doc, setDoc, getDocs, addDoc } from "firebase/firestore";
-import {db} from "../../firebase-config"
-import { Textarea } from "@material-tailwind/react";
-import React, {useEffect, useState} from "react";
+import emailjs from "@emailjs/browser";
+import React, {useState} from "react";
 import {AnimatePresence, motion} from "framer-motion";
 import {Reveal} from "../common/Reveal";
 
+const SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 
 function Contact() {
-    const dbRef = collection(db, "Notifications")
-    const [isDisabled, setIsDisabled] = useState(false);
+    const [status, setStatus] = useState("idle"); // idle | sending | sent | error
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
-    const [phone, setPhone] = useState();
+    const [phone, setPhone] = useState("");
 
-    const data = {
-        name: name,
-        email: email,
-        phone: phone,
-        message: message
-    };
+    const isDisabled = status === "sending" || status === "sent";
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        addDoc(dbRef, data)
-            .then(docRef => {
-                setIsDisabled(!isDisabled)
-                console.log("Document has been added successfully");
-            })
-            .catch(error => {
-                console.log(error);
-            })
+        setStatus("sending");
+        try {
+            await emailjs.send(
+                SERVICE_ID,
+                TEMPLATE_ID,
+                { name, email, phone, message },
+                { publicKey: PUBLIC_KEY }
+            );
+            setStatus("sent");
+        } catch (error) {
+            console.log(error);
+            setStatus("error");
+        }
     };
 
     return (
@@ -86,13 +86,13 @@ function Contact() {
                             <form action="" className="space-y-4" onSubmit={handleSubmit}>
                                 <div>
                                     <label className="sr-only" htmlFor="name">Name</label>
-                                    <input className="w-full rounded-lg bg-base-100 border-base-300 hover:bg-base-200 hover:border-base-content/40 focus:border-base-content transition-colors p-3 text-sm" placeholder="Name" type="text" value={name} onChange={e => setName(e.target.value)} disabled={isDisabled}/>
+                                    <input className="w-full rounded-lg bg-base-100 border-base-300 hover:bg-base-200 hover:border-base-content/40 focus:border-base-content transition-colors p-3 text-sm" placeholder="Name" type="text" value={name} onChange={e => setName(e.target.value)} disabled={isDisabled} required/>
                                 </div>
 
                                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                                     <div>
                                         <label className="sr-only" htmlFor="email">Email</label>
-                                        <input className="w-full bg-base-100 rounded-lg border-base-300 hover:bg-base-200 hover:border-base-content/40 focus:border-base-content transition-colors p-3 text-sm" placeholder="Email address" type="email" value={email} onChange={e => setEmail(e.target.value)} disabled={isDisabled}/>
+                                        <input className="w-full bg-base-100 rounded-lg border-base-300 hover:bg-base-200 hover:border-base-content/40 focus:border-base-content transition-colors p-3 text-sm" placeholder="Email address" type="email" value={email} onChange={e => setEmail(e.target.value)} disabled={isDisabled} required/>
                                     </div>
                                     <div>
                                         <label className="sr-only" htmlFor="phone">Phone</label>
@@ -101,13 +101,10 @@ function Contact() {
                                 </div>
                                 <div>
                                     <label className="sr-only" htmlFor="message">Message</label>
-
-                                    {isDisabled?<textarea disabled className="w-full bg-base-100 rounded-lg border-base-300 hover:bg-base-200 hover:border-base-content/40 focus:border-base-content transition-colors p-3 text-sm" placeholder="Message" rows="8" value={message} onChange={e => setMessage(e.target.value)} ></textarea> : <textarea  className="w-full bg-base-100 rounded-lg border-base-300 hover:bg-base-200 hover:border-base-content/40 focus:border-base-content transition-colors p-3 text-sm" placeholder="Message" rows="8" value={message} onChange={e => setMessage(e.target.value)} ></textarea> }
-
-
+                                    <textarea disabled={isDisabled} className="w-full bg-base-100 rounded-lg border-base-300 hover:bg-base-200 hover:border-base-content/40 focus:border-base-content transition-colors p-3 text-sm" placeholder="Message" rows="8" value={message} onChange={e => setMessage(e.target.value)} required></textarea>
                                 </div>
                                 <AnimatePresence>
-                                    {isDisabled &&
+                                    {status === "sent" &&
                                         <motion.div
                                             initial={{ opacity: 0, y: -8 }}
                                             animate={{ opacity: 1, y: 0 }}
@@ -116,13 +113,22 @@ function Contact() {
                                             Thanks for reaching out to me.
                                         </motion.div>
                                     }
+                                    {status === "error" &&
+                                        <motion.div
+                                            initial={{ opacity: 0, y: -8 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            exit={{ opacity: 0 }}
+                                            className="text-error">
+                                            Something went wrong sending your message. Please try again or email me directly.
+                                        </motion.div>
+                                    }
                                 </AnimatePresence>
                                 <div className="mt-4">
                                     <motion.button
                                         whileHover={{ scale: isDisabled ? 1 : 1.02 }}
                                         whileTap={{ scale: isDisabled ? 1 : 0.98 }}
                                         disabled={isDisabled} type="submit" className="inline-block border border-base-300 w-full bg-base-100 rounded-lg hover:bg-base-200 hover:border-base-content/40 transition-colors px-5 py-3 font-medium text-base-content sm:w-auto">
-                                        Send Message
+                                        {status === "sending" ? "Sending..." : "Send Message"}
                                     </motion.button>
                                 </div>
                             </form>
