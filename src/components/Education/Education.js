@@ -16,9 +16,9 @@ function Education() {
                         <div className="items-center justify-self-center text-info ">
                             <Reveal delay={0.1} y={32} className="card p-4 border border-base-300 hover:border-base-content grid grid-cols-12 lg:card-side bg-neutral hover:bg-base-content/5 shadow-xl w-100 transition-all duration-300 hover:shadow-2xl hover:shadow-base-content/10">
                                 <div className="self-center	col-span-12 lg:p-0 lg:col-span-4 justify-self-center	">
-                                    <div className="avatar w-42 lg:w-60">
-                                        <div className="w-60 rounded-full">
-                                            <img className="h-40" src={csulbImg} alt="Album"/>
+                                    <div className="avatar">
+                                        <div className="w-32 sm:w-40 lg:w-60 rounded-full">
+                                            <img className="w-32 h-32 sm:w-40 sm:h-40 lg:w-60 lg:h-60 object-cover" src={csulbImg} alt="Album"/>
                                         </div>
                                     </div>
                                 </div>

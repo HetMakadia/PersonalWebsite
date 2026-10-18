@@ -47,9 +47,9 @@ function Contact() {
                             </p>
 
                             <div className="mt-8">
-                                <a href="" className="text-4xl font-bold text-base-content">
+                                <p className="text-4xl font-bold text-base-content">
                                     Het Makadia
-                                </a>
+                                </p>
                                 <br/>
                                 {/*<a href="tel:+16572959821" className=" mt-2 text-lg font-bold text-base-content/60">*/}
                                 {/*    (657) 295-9821*/}

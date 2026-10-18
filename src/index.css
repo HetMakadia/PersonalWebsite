@@ -33,6 +33,16 @@ code {
     monospace;
 }
 
+/* Scrollable but no visible scrollbar (used by Virgo Mode's message list) */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 [data-theme="dark"] ::selection {
   background-color: #ffffff;
   color: #131313;

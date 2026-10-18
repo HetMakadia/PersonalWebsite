@@ -1,0 +1,11 @@
+name = "virgo-chat-proxy"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+
+[vars]
+GEMINI_MODEL = "gemini-3.1-flash-lite"
+ALLOWED_ORIGINS = "http://localhost:3000,https://hetmakadia.com"
+
+# GEMINI_API_KEY is NOT set here — it's a secret, set via:
+#   wrangler secret put GEMINI_API_KEY
+# (or Dashboard > Workers > virgo-chat-proxy > Settings > Variables > Encrypt)
