@@ -9,6 +9,7 @@ import WorkExperience from "./components/WorkExperience/WorkExperience";
 import Skills from "./components/Skills/Skills";
 import Contact from "./components/Contact/Contact";
 import { BackToTop } from "./components/common/BackToTop";
+import { AmbientBackground } from "./components/common/AmbientBackground";
 
 const LOG_VISIT_URL =
     "https://us-central1-myportfolio-fbc40.cloudfunctions.net/logVisit";
@@ -91,7 +92,8 @@ function App() {
     }, []);
 
     return (
-        <div className="bg-neutral h-screen grid grid-cols-12">
+        <div className="h-screen grid grid-cols-12">
+            <AmbientBackground />
             <div className="h-full col-span-12">
                 <header className="sticky absolute top-0 left-0 right-0 col-span-12 z-30">
                     <Navbar />

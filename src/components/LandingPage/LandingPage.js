@@ -15,10 +15,7 @@ const item = {
 
 function LandingPage() {
     return (
-        <section id="main" className="relative items-center bg-base-100 content-center grid grid-cols-2 select-none overflow-hidden">
-            <div aria-hidden="true" className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-accent/30 blur-3xl animate-pulse-glow" />
-            <div aria-hidden="true" className="pointer-events-none absolute bottom-0 right-0 h-96 w-96 rounded-full bg-gray-500/10 blur-3xl animate-pulse-glow" />
-
+        <section id="main" className="relative items-center content-center grid grid-cols-2 select-none overflow-hidden">
             <motion.div
                 className="relative z-10 col-span-2 lg:col-span-1 justify-self-center text-info p-14 lg:p-24"
                 initial="hidden"

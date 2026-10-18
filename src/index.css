@@ -44,12 +44,6 @@ code {
   background: #868686;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-}
-
 @keyframes float-slow {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-14px); }
@@ -59,11 +53,23 @@ code {
   animation: float-slow 6s ease-in-out infinite;
 }
 
-@keyframes pulse-glow {
-  0%, 100% { opacity: 0.35; }
-  50% { opacity: 0.6; }
+@keyframes blob-drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -20px) scale(1.08); }
+  66% { transform: translate(-20px, 25px) scale(0.95); }
 }
 
-.animate-pulse-glow {
-  animation: pulse-glow 5s ease-in-out infinite;
+.animate-blob-drift {
+  animation: blob-drift 22s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-float-slow,
+  .animate-blob-drift {
+    animation: none;
+  }
 }
