@@ -27,10 +27,9 @@ function LandingPage() {
                 </motion.h1>
                 <br/>
                 <motion.p className="main-text" variants={item}>
-                    Combining my passion for frontend development with my knowledge of backend technologies, I'm
-                    constantly pushing the boundaries of web development to create innovative, responsive, and engaging
-                    digital experiences that drive user engagement and business growth. Whether it's a custom website or
-                    a complex web application, I'm always up for a challenge.
+                    I build clean, responsive interfaces and back them with solid, well-structured systems. From
+                    quick personal projects to full enterprise applications, I enjoy turning complex problems into
+                    software that just works.
                 </motion.p>
                 <br/>
                 <motion.div className="btn p-0" variants={item} whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
