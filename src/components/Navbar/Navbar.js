@@ -19,6 +19,7 @@ function NavLink({ to, label, className = "" }) {
             smooth={true}
             offset={-70}
             duration={500}
+            onClick={() => document.activeElement?.blur()}
         >
             {label}
         </Link>
@@ -55,7 +56,7 @@ function Navbar({ mode = "site", onExitChat }) {
                     </div>
                 )}
                 {isChatMode ? (
-                    <button type="button" onClick={onExitChat} className="btn btn-ghost normal-case text-2xl font-bold transition-transform hover:scale-105">
+                    <button type="button" onClick={onExitChat} className="btn btn-ghost btn-sm sm:btn-md px-2 sm:px-4 normal-case text-base sm:text-2xl font-bold transition-transform hover:scale-105">
                         Het Makadia
                     </button>
                 ) : (
@@ -67,12 +68,13 @@ function Navbar({ mode = "site", onExitChat }) {
                     <button
                         type="button"
                         onClick={onExitChat}
-                        className="inline-flex items-center gap-2 rounded-full border border-base-300 px-4 py-1.5 text-sm font-bold text-base-content/70 transition-colors hover:text-base-content hover:border-base-content/40"
+                        className="inline-flex items-center gap-1 sm:gap-2 rounded-full border border-base-300 px-2.5 sm:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-bold text-base-content/70 transition-colors hover:text-base-content hover:border-base-content/40"
                     >
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                         </svg>
-                        Back to basics
+                        <span className="sm:hidden">Back</span>
+                        <span className="hidden sm:inline">Back to basics</span>
                     </button>
                 ) : (
                     <ul className="hidden lg:flex menu menu-horizontal px-1 font-bold gap-2">
