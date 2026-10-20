@@ -7,7 +7,7 @@ export function Reveal({ children, delay = 0, y = 24, className = "", as = "div"
             className={className}
             initial={{ opacity: 0, y }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, margin: "0px 0px -45% 0px" }}
             transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
             {...rest}
         >
@@ -23,7 +23,7 @@ export function RevealGroup({ children, className = "", as = "div" }) {
             className={className}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.15 }}
+            viewport={{ once: true, margin: "0px 0px -45% 0px" }}
             variants={{
                 hidden: {},
                 visible: { transition: { staggerChildren: 0.12 } },
